@@ -53,6 +53,7 @@
   ]);
 
   programs.dconf.enable = true;
+  programs.nix-ld.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -105,17 +106,21 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    wget
-    vscode-fhs
-    neovim
-    curl
-    adw-gtk3
-    gnomeExtensions.just-perfection
-    gnome.adwaita-icon-theme
-    firefox
-    gnome.gnome-tweaks
-    blackbox-terminal
-    nixpkgs-fmt
+    # wget
+    # vscode-fhs
+    # neovim
+    # curl
+    # adw-gtk3
+    # gnomeExtensions.just-perfection
+    # gnome.adwaita-icon-theme
+    # firefox
+    # gnome.gnome-tweaks
+    # blackbox-terminal
+    # nixpkgs-fmt
+    # nodejs_21
+    # dotnet-sdk_8
+    # bottom
+    # nodePackages_latest.pnpm
   ];
 
   services.flatpak.enable = true;
@@ -150,6 +155,18 @@
     };
   };
 
+  environment = {
+    homeBinInPath = true;
+    localBinInPath = true;
+    # variables = {
+    #   PATH = "$PATH:/home/doink/.dotnet/tools";
+    # };
+    # export PATH="$PATH:/home/doink/.dotnet/tools"
+    sessionVariables = {
+      DOTNET_ROOT = "${pkgs.dotnet-sdk_8}";
+    };
+  };
+
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
@@ -178,9 +195,9 @@
     };
   };
 
-  system.activationScripts.script.text = ''
-    cp /home/doink/.face.png /var/lib/AccountsService/icons/doink
-  '';
+  # system.activationScripts.script.text = ''
+  #   cp /home/doink/.face.png /var/lib/AccountsService/icons/doink
+  # '';
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

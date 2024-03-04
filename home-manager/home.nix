@@ -42,13 +42,12 @@
     username = "doink";
     homeDirectory = "/home/doink";
 
-    packages = with pkgs; [
-
-    ];
-
     shellAliases = {
       d = "distrobox";
+      pm = "pnpm";
     };
+
+    sessionPath = [ "$HOME/.dotnet/tools" ];
   };
 
   home.file.".face" = {
@@ -61,17 +60,33 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-  # home.packages = with pkgs; [ steam ];
-  # home.file = { 
-  #   ".mozilla/firefox/doink/chrome" = { 
-  #     source = "github:rafaelmardojai/firefox-gnome-theme"; 
-  #     recursive = true; 
+  home.packages = with pkgs; [
+    wget
+    vscode-fhs
+    neovim
+    curl
+    adw-gtk3
+    gnomeExtensions.just-perfection
+    gnome.adwaita-icon-theme
+    firefox
+    gnome.gnome-tweaks
+    blackbox-terminal
+    nixpkgs-fmt
+    nodejs_21
+    dotnet-sdk_8
+    bottom
+    nodePackages_latest.pnpm
+  ];
+  # home.file = {
+  #   ".mozilla/firefox/doink/chrome" = {
+  #     source = "github:rafaelmardojai/firefox-gnome-theme";
+  #     recursive = true;
   #   };
-  # }; 
+  # };
   # home.file.".mozilla/firefox/doink/chrome".source = builtins.fetchGit {
   #   url = "github:rafaelmardojai/firefox-gnome-theme";
   # };
-  # home.file.".mozilla/firefox/doink/chrome".source = inputs.firefox-gnome-theme;
+  home.file.".mozilla/firefox/doink/chrome".source = inputs.firefox-gnome-theme;
 
   programs = {
     home-manager.enable = true;
@@ -91,98 +106,97 @@
     zoxide.enable = true;
     fzf.enable = true;
     jq.enable = true;
-    # firefox = {
-    #   enable = true;
-    #   profiles.doink = {
-    #     settings = {
-    #       "extensions.pocket.enabled" = false;
-    #       "gfx.webrender.all" = true;
-    #       "media.ffmpeg.vaapi.enabled" = true;
-    #       "media.ffvpx.enabled" = false;
-    #       "media.navigator.mediadataencoder_vpx_enabled" = true;
-    #       "media.rdd-ffmpeg.enabled" = true;
-    #       "ui.key.menuAccessKey" = 0; # Hide access key underlining
-    #       "browser.uidensity" = 0;
-    #       "gnomeTheme.activeTabContrast" = true;
-    #       "gnomeTheme.bookmarksToolbarUnderTabs" = true;
-    #       "gnomeTheme.hideSingleTab" = false;
-    #       "gnomeTheme.hideWebrtcIndicator" = true;
-    #       "gnomeTheme.spinner" = true;
-    #       "gnomeTheme.normalWidthTabs" = true;
-    #       "gnomeTheme.tabsAsHeaderbar" = false;
-    #       "layers.acceleration.force-enabled" = true;
-    #       "svg.context-properties.content.enabled" = true;
-    #       "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-    #       "widget.gtk.overlay-scrollbars.enabled" = true;
-    #     };
+    firefox = {
+      enable = true;
+      # profiles.doink = {
+      #   settings = {
+      #     "extensions.pocket.enabled" = false;
+      #     "gfx.webrender.all" = true;
+      #     "media.ffmpeg.vaapi.enabled" = true;
+      #     "media.ffvpx.enabled" = false;
+      #     "media.navigator.mediadataencoder_vpx_enabled" = true;
+      #     "media.rdd-ffmpeg.enabled" = true;
+      #     "ui.key.menuAccessKey" = 0; # Hide access key underlining
+      #     "browser.uidensity" = 0;
+      #     "gnomeTheme.activeTabContrast" = true;
+      #     "gnomeTheme.bookmarksToolbarUnderTabs" = true;
+      #     "gnomeTheme.hideSingleTab" = false;
+      #     "gnomeTheme.hideWebrtcIndicator" = true;
+      #     "gnomeTheme.spinner" = true;
+      #     "gnomeTheme.normalWidthTabs" = true;
+      #     "gnomeTheme.tabsAsHeaderbar" = false;
+      #     "layers.acceleration.force-enabled" = true;
+      #     "svg.context-properties.content.enabled" = true;
+      #     "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+      #     "widget.gtk.overlay-scrollbars.enabled" = true;
+      #   };
+    };
+  };
+  starship = {
+    enable = true;
+    # settings = {
+    #   username = {
+    #     style_user = "blue bold";
+    #     style_root = "red bold";
+    #     format = "[$user]($style) ";
+    #     disabled = false;
+    #     show_always = true;
     #   };
-    # };
-    # starship = {
-    #   enable = true;
-    #   settings = {
-    #     username = {
-    #       style_user = "blue bold";
-    #       style_root = "red bold";
-    #       format = "[$user]($style) ";
-    #       disabled = false;
-    #       show_always = true;
-    #     };
-    #     hostname = {
-    #       ssh_only = false;
-    #       ssh_symbol = "🌐 ";
-    #       format = "on [$hostname](bold red) ";
-    #       trim_at = ".local";
-    #       disabled = false;
-    #     };
+    #   hostname = {
+    #     ssh_only = false;
+    #     ssh_symbol = "🌐 ";
+    #     format = "on [$hostname](bold red) ";
+    #     trim_at = ".local";
+    #     disabled = false;
     #   };
     # };
   };
+}
 
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
-  # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  home.stateVersion = "23.11";
+# https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
+home.stateVersion = "23.11";
 
-  gtk = {
-    enable = true;
-    gtk3.extraConfig = {
-      Settings = ''
+gtk = {
+enable = true;
+gtk3.extraConfig = {
+Settings = ''
         gtk-application-prefer-dark-theme=1
       '';
-    };
-    gtk4.extraConfig = {
-      Settings = ''
+};
+gtk4.extraConfig = {
+Settings = ''
         gtk-application-prefer-dark-theme=1
       '';
-    };
-  };
+};
+};
 
-  dconf.settings = {
-    # "org/gnome/shell" = {
-    #   favorite-apps = [
-    #     "firefox.desktop"
-    #     "code.desktop"
-    #     "org.gnome.Terminal.desktop"
-    #     "spotify.desktop"
-    #     "virt-manager.desktop"
-    #     "org.gnome.Nautilus.desktop"
-    #   ];
-    # };
+dconf.settings = {
+"org/gnome/shell" = {
+favorite-apps = [
+"firefox.desktop"
+"com.raggesilver.BlackBox.desktop"
+"org.gnome.Nautilus.desktop"
+"code.desktop"
+];
+};
 
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-      # scaling-factor = "1.25";
-    };
+"org/gnome/desktop/interface" = {
+color-scheme = "prefer-dark";
+text-scaling-factor = 1.25;
+# scaling-factor = "1.25";
+};
 
-    "org/gnome/mutter" = {
-      dynamic-workspaces = true;
-      edge-tiling = true;
-    };
+"org/gnome/mutter" = {
+dynamic-workspaces = true;
+edge-tiling = true;
+};
 
-    "org/gnome/desktop/peripherals/touchpad" = {
-      tap-to-click = true;
-    };
-  };
+"org/gnome/desktop/peripherals/touchpad" = {
+tap-to-click = true;
+};
+};
 }
