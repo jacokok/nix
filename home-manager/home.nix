@@ -160,6 +160,17 @@
   };
 
   dconf.settings = {
+    # "org/gnome/shell" = {
+    #   favorite-apps = [
+    #     "firefox.desktop"
+    #     "code.desktop"
+    #     "org.gnome.Terminal.desktop"
+    #     "spotify.desktop"
+    #     "virt-manager.desktop"
+    #     "org.gnome.Nautilus.desktop"
+    #   ];
+    # };
+
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       # scaling-factor = "1.25";
@@ -168,6 +179,10 @@
     "org/gnome/mutter" = {
       dynamic-workspaces = true;
       edge-tiling = true;
+    };
+
+    "org/gnome/desktop/peripherals/touchpad" = {
+      tap-to-click = true;
     };
   };
 }
