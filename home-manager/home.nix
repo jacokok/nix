@@ -51,9 +51,9 @@
     };
   };
 
-  # home.file.".face" = {
-  #   source = .../assets/face.png;
-  # };
+  home.file.".face" = {
+    source = .../assets/face.png;
+  };
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
