@@ -16,28 +16,16 @@
   ];
 
   nixpkgs = {
-    # You can add overlays here
     overlays = [
-      # If you want to use overlays exported from other flakes:
-      # neovim-nightly-overlay.overlays.default
-
-      # Or define it inline, for example:
-      # (final: prev: {
-      #   hi = final.hello.overrideAttrs (oldAttrs: {
-      #     patches = [ ./change-hello-to-hi.patch ];
-      #   });
-      # })
     ];
     # Configure your nixpkgs instance
     config = {
-      # Disable if you don't want unfree packages
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = _: true;
     };
   };
 
-  # TODO: Set your username
   home = {
     username = "doink";
     homeDirectory = "/home/doink";
@@ -54,12 +42,6 @@
     source = ../assets/face.png;
   };
 
-  # home.file.".test".text = ''
-  #   tstest
-  # '';
-
-  # Add stuff for your user as you see fit:
-  # programs.neovim.enable = true;
   home.packages = with pkgs; [
     wget
     ripgrep
@@ -100,7 +82,7 @@
     jq.enable = true;
     firefox = {
       enable = true;
-      profiles.test = {
+      profiles.doink = {
         settings = {
           "extensions.pocket.enabled" = false;
           "gfx.webrender.all" = true;
@@ -120,7 +102,7 @@
           "layers.acceleration.force-enabled" = true;
           "svg.context-properties.content.enabled" = true;
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-          "widget.gtk.overlay-scrollbars.enabled" = true;
+          "browser.tabs.drawInTitlebar" = true;
         };
       };
     };
@@ -141,20 +123,6 @@
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "23.11";
-
-  # gtk = {
-  #   enable = true;
-  #   gtk3.extraConfig = {
-  #     Settings = ''
-  #       gtk-application-prefer-dark-theme=1
-  #     '';
-  #   };
-  #   gtk4.extraConfig = {
-  #     Settings = ''
-  #       gtk-application-prefer-dark-theme=1
-  #     '';
-  #   };
-  # };
 
   dconf.settings = {
     "org/gnome/shell" = {
