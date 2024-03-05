@@ -62,6 +62,7 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs; [
     wget
+    ripgrep
     vscode-fhs
     neovim
     curl
