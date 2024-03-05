@@ -67,7 +67,6 @@
     curl
     adw-gtk3
     gnomeExtensions.just-perfection
-    gnome.adwaita-icon-theme
     firefox
     gnome.gnome-tweaks
     blackbox-terminal
@@ -75,6 +74,7 @@
     nodejs_21
     dotnet-sdk_8
     bottom
+    distrobox
     nodePackages_latest.pnpm
   ];
   # home.file = {
@@ -131,72 +131,63 @@
       #     "widget.gtk.overlay-scrollbars.enabled" = true;
       #   };
     };
+    starship = {
+      enable = true;
+      settings = {
+        character = {
+          success_symbol = "[→](green)";
+          error_symbol = "[→](red)";
+        };
+      };
+    };
   };
-  starship = {
-    enable = true;
-    # settings = {
-    #   username = {
-    #     style_user = "blue bold";
-    #     style_root = "red bold";
-    #     format = "[$user]($style) ";
-    #     disabled = false;
-    #     show_always = true;
-    #   };
-    #   hostname = {
-    #     ssh_only = false;
-    #     ssh_symbol = "🌐 ";
-    #     format = "on [$hostname](bold red) ";
-    #     trim_at = ".local";
-    #     disabled = false;
-    #   };
-    # };
-  };
-}
 
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
-# https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-home.stateVersion = "23.11";
+  # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
+  home.stateVersion = "23.11";
 
-gtk = {
-enable = true;
-gtk3.extraConfig = {
-Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-};
-gtk4.extraConfig = {
-Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-};
-};
+  # gtk = {
+  #   enable = true;
+  #   gtk3.extraConfig = {
+  #     Settings = ''
+  #       gtk-application-prefer-dark-theme=1
+  #     '';
+  #   };
+  #   gtk4.extraConfig = {
+  #     Settings = ''
+  #       gtk-application-prefer-dark-theme=1
+  #     '';
+  #   };
+  # };
 
-dconf.settings = {
-"org/gnome/shell" = {
-favorite-apps = [
-"firefox.desktop"
-"com.raggesilver.BlackBox.desktop"
-"org.gnome.Nautilus.desktop"
-"code.desktop"
-];
-};
+  dconf.settings = {
+    "org/gnome/shell" = {
+      favorite-apps = [
+        "firefox.desktop"
+        "com.raggesilver.BlackBox.desktop"
+        "org.gnome.Nautilus.desktop"
+        "code.desktop"
+      ];
+    };
 
-"org/gnome/desktop/interface" = {
-color-scheme = "prefer-dark";
-text-scaling-factor = 1.25;
-# scaling-factor = "1.25";
-};
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+      text-scaling-factor = 1.25;
+      gtk-theme = "adw-gtk3-dark";
+      monospace-font-name = "FiraCode Nerd Font Mono Regular 10";
+      icon-theme = "MoreWaita";
+    };
 
-"org/gnome/mutter" = {
-dynamic-workspaces = true;
-edge-tiling = true;
-};
+    "org/gnome/mutter" = {
+      dynamic-workspaces = true;
+      edge-tiling = true;
+    };
 
-"org/gnome/desktop/peripherals/touchpad" = {
-tap-to-click = true;
-};
-};
+    "org/gnome/desktop/peripherals/touchpad" = {
+      tap-to-click = true;
+    };
+  };
 }

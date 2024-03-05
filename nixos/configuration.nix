@@ -106,6 +106,8 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    gnome.adwaita-icon-theme
+    morewaita-icon-theme
     # wget
     # vscode-fhs
     # neovim
@@ -143,6 +145,18 @@
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
+  };
+
+  system.autoUpgrade = {
+    enable = true;
+    flake = inputs.self.outPath;
+    flags = [
+      "--update-input"
+      "nixpkgs"
+      "-L" # print build logs
+    ];
+    dates = "02:00";
+    randomizedDelaySec = "45min";
   };
 
   virtualisation = {
@@ -188,11 +202,6 @@
       fira-code
       (nerdfonts.override { fonts = [ "FiraCode" ]; })
     ];
-    fontconfig = {
-      defaultFonts = {
-        monospace = [ "FiraCode Nerd Font Regular" ];
-      };
-    };
   };
 
   # system.activationScripts.script.text = ''
