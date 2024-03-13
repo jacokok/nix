@@ -88,6 +88,7 @@
     distrobox
     nodePackages_latest.pnpm
   ];
+
   home.file.".mozilla/firefox/doink/chrome".source = inputs.firefox-gnome-theme;
 
   programs = {

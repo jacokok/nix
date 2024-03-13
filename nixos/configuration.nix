@@ -125,7 +125,18 @@
     # nodePackages_latest.pnpm
   ];
 
-  services.flatpak.enable = true;
+  services.flatpak = {
+    enable = true;
+    uninstallUnmanagedPackages = true;
+    update.onActivation = true;
+    packages = [
+      "org.gtk.Gtk3theme.adw-gtk3-dark"
+      "com.usebruno.Bruno"
+      "io.gitlab.adhami3310.Impression"
+      "io.beekeeperstudio.Studio"
+      "com.github.tchx84.Flatseal"
+    ];
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

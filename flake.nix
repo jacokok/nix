@@ -16,17 +16,13 @@
       flake = false;
     };
 
-    # TODO: Add any other flake you might need
-    # hardware.url = "github:nixos/nixos-hardware";
-
-    # Shameless plug: looking for a way to nixify your themes and make
-    # everything match nicely? Try nix-colors!
-    # nix-colors.url = "github:misterio77/nix-colors";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
   outputs =
     { self
     , nixpkgs
+    , nix-flatpak
     , home-manager
     , ...
     } @ inputs:
@@ -41,7 +37,10 @@
         doink-laptop = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           # > Our main nixos configuration file <
-          modules = [ ./nixos/configuration.nix ];
+          modules = [
+            nix-flatpak.nixosModules.nix-flatpak
+            ./nixos/configuration.nix
+          ];
         };
       };
 
