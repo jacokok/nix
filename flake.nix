@@ -43,7 +43,7 @@
 
             home-manager.nixosModules.home-manager
             ({ config, lib, ... }: {
-              # home-manager.useGlobalPkgs = true;
+              home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.extraSpecialArgs = {
                 inherit inputs;
@@ -54,6 +54,8 @@
                 ];
               };
             })
+
+            (import ./overlays)
           ];
         };
       };

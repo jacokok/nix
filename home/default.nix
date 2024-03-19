@@ -12,40 +12,38 @@
   ];
 
   nixpkgs = {
-    overlays = [
-      # (
-      #   final: prev: {
-      #     dotnetCorePackages.dotnet_8.sdk = prev.dotnetCorePackages.dotnet_8.sdk.overrideAttrs (_: rec {
-      #       postInstall = ''
-      #         for i in $out/sdk/*
-      #           do
-      #             i=$(basename $i)
-      #             length=$(printf "%s" "$i" | wc -c)
-      #             substring=$(printf "%s" "$i" | cut -c 1-$(expr $length - 2))
-      #             i="$substring""00"
-      #             mkdir -p $out/metadata/workloads/''${i/-*}
-      #             touch $out/metadata/workloads/''${i/-*}/userlocal
-      #         done
-      #       '';
-      #     });
-      #     # vscode = prev.vscode.overrideAttrs (_: rec {
-      #     #   version = "1.87.0";
-      #     #   plat = "linux-x64";
-      #     #   archive_fmt = "tar.gz";
-      #     #   pname = "vscode";
-      #     #   src = prev.fetchurl {
-      #     #     url = "https://update.code.visualstudio.com/${version}/${plat}/stable";
-      #     #     sha256 = "00izdy01d34czxfjn6rv4vg179r7f264bls5fib4caakj9bblalw";
-      #     #     name = "VSCode_${version}_${plat}.${archive_fmt}";
-      #     #   };
-      #     # });
-      #   }
-      # )
-    ];
-    # Configure your nixpkgs instance
+    # overlays = [
+    # (
+    #   final: prev: {
+    #     dotnetCorePackages.dotnet_8.sdk = prev.dotnetCorePackages.dotnet_8.sdk.overrideAttrs (_: rec {
+    #       postInstall = ''
+    #         for i in $out/sdk/*
+    #           do
+    #             i=$(basename $i)
+    #             length=$(printf "%s" "$i" | wc -c)
+    #             substring=$(printf "%s" "$i" | cut -c 1-$(expr $length - 2))
+    #             i="$substring""00"
+    #             mkdir -p $out/metadata/workloads/''${i/-*}
+    #             touch $out/metadata/workloads/''${i/-*}/userlocal
+    #         done
+    #       '';
+    #     });
+    #     # vscode = prev.vscode.overrideAttrs (_: rec {
+    #     #   version = "1.87.0";
+    #     #   plat = "linux-x64";
+    #     #   archive_fmt = "tar.gz";
+    #     #   pname = "vscode";
+    #     #   src = prev.fetchurl {
+    #     #     url = "https://update.code.visualstudio.com/${version}/${plat}/stable";
+    #     #     sha256 = "00izdy01d34czxfjn6rv4vg179r7f264bls5fib4caakj9bblalw";
+    #     #     name = "VSCode_${version}_${plat}.${archive_fmt}";
+    #     #   };
+    #     # });
+    #   }
+    # )
+    # ];
     config = {
       allowUnfree = true;
-      # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = _: true;
     };
   };
