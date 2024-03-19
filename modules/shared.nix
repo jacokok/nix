@@ -1,15 +1,7 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, inputs, outputs, ... }:
 
 {
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -55,60 +47,8 @@
     #media-session.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.doink = {
-    isNormalUser = true;
-    description = "doink";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
-    packages = with pkgs; [
-    ];
-  };
-
-  home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; };
-    #   users = {
-    #     doink = import ../../home-manager/home.nix;
-    #   };
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  environment.systemPackages = with pkgs; [
-    gnome.adwaita-icon-theme
-    morewaita-icon-theme
-    # wget
-    # vscode-fhs
-    # neovim
-    # curl
-    # adw-gtk3
-    # gnomeExtensions.just-perfection
-    # gnome.adwaita-icon-theme
-    # firefox
-    # gnome.gnome-tweaks
-    # blackbox-terminal
-    # nixpkgs-fmt
-    # nodejs_21
-    # dotnet-sdk_8
-    # bottom
-    # nodePackages_latest.pnpm
-  ];
-
-  services.flatpak = {
-    enable = true;
-    uninstallUnmanagedPackages = true;
-    update.onActivation = true;
-    packages = [
-      "org.gtk.Gtk3theme.adw-gtk3-dark"
-      "com.usebruno.Bruno"
-      "io.gitlab.adhami3310.Impression"
-      "io.beekeeperstudio.Studio"
-      "com.github.tchx84.Flatseal"
-    ];
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -174,18 +114,6 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
-  fonts = {
-    fontDir.enable = true;
-    enableDefaultPackages = true;
-    packages = with pkgs; [
-      noto-fonts
-      corefonts
-      liberation_ttf
-      fira-code
-      (nerdfonts.override { fonts = [ "FiraCode" ]; })
-    ];
-  };
 
   # system.activationScripts.script.text = ''
   #   cp /home/doink/.face.png /var/lib/AccountsService/icons/doink
