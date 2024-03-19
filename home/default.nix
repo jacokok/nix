@@ -8,11 +8,7 @@
 }: {
   # You can import other home-manager modules here
   imports = [
-    # If you want to use home-manager modules from other flakes (such as nix-colors):
-    # inputs.nix-colors.homeManagerModule
-
-    # You can also split up your configuration and import pieces of it here:
-    # ./nvim.nix
+    ./programs
   ];
 
   nixpkgs = {
@@ -135,17 +131,7 @@
         };
       };
     };
-    starship = {
-      enable = true;
-      settings = {
-        character = {
-          success_symbol = "[→](green)";
-          error_symbol = "[→](red)";
-        };
-      };
-    };
   };
-
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

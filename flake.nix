@@ -39,7 +39,21 @@
           # > Our main nixos configuration file <
           modules = [
             nix-flatpak.nixosModules.nix-flatpak
-            ./nixos/configuration.nix
+            ./hosts/doink-laptop
+
+            home-manager.nixosModules.home-manager
+            ({ config, lib, ... }: {
+              # home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = {
+                inherit inputs;
+              };
+              home-manager.users.doink = { ... }: {
+                imports = [
+                  ./home
+                ];
+              };
+            })
           ];
         };
       };
