@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./programs
+    ./packages.nix
   ];
 
   nixpkgs = {
@@ -30,25 +31,6 @@
   home.file.".face" = {
     source = ../assets/face.png;
   };
-
-  home.packages = with pkgs; [
-    wget
-    ripgrep
-    vscode-fhs
-    neovim
-    curl
-    adw-gtk3
-    gnomeExtensions.just-perfection
-    firefox
-    gnome.gnome-tweaks
-    blackbox-terminal
-    nixpkgs-fmt
-    nodejs_21
-    dotnetCorePackages.dotnet_8.sdk
-    bottom
-    distrobox
-    nodePackages_latest.pnpm
-  ];
 
   home.file.".mozilla/firefox/doink/chrome".source = inputs.firefox-gnome-theme;
 

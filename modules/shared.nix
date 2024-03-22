@@ -58,6 +58,9 @@
   #   enableSSHSupport = true;
   # };
 
+  # Limit the number of generations to keep
+  boot.loader.systemd-boot.configurationLimit = 10;
+
   nix = {
     settings = {
       experimental-features = "nix-command flakes";
@@ -101,6 +104,8 @@
     # export PATH="$PATH:/home/doink/.dotnet/tools"
     sessionVariables = {
       DOTNET_ROOT = "${pkgs.dotnet-sdk_8}";
+      TERMINAL = "blackbox";
+      TERM = "blackbox";
     };
   };
 
