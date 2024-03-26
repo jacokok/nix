@@ -19,7 +19,7 @@
       "com.mattjakeman.ExtensionManager"
       "io.github.flattool.Warehouse"
       "io.github.fabrialberio.pinapp"
-      # "com.usebruno.Bruno"
+      "com.usebruno.Bruno"
     ];
   };
 }
