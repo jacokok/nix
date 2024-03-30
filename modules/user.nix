@@ -3,7 +3,7 @@
 {
   users.users.doink = {
     isNormalUser = true;
-    description = "doink";
+    description = "Doink";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 }

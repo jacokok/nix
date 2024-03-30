@@ -58,6 +58,30 @@
             (import ./overlays)
           ];
         };
+        doink-pc = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          # > Our main nixos configuration file <
+          modules = [
+            nix-flatpak.nixosModules.nix-flatpak
+            ./hosts/doink-pc
+
+            home-manager.nixosModules.home-manager
+            ({ config, lib, ... }: {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = {
+                inherit inputs;
+              };
+              home-manager.users.doink = { ... }: {
+                imports = [
+                  ./home
+                ];
+              };
+            })
+
+            (import ./overlays)
+          ];
+        };        
       };
 
       # Standalone home-manager configuration entrypoint
