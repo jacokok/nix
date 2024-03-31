@@ -28,27 +28,28 @@ init()
 
 pull()
 {
-    git https://github.com/jacokok/nix.git /tmp/nix
+    git clone https://github.com/jacokok/nix.git /tmp/nix
 }
 
 disko()
 {
     device=${1:-/dev/nvme0n1}
-    sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko /tmp/nix/hosts/disko.nix --arg device "'$device'"
+    sudo nix --experimental-features "nix-command flakes" run github:nix-community/disko -- --mode disko /tmp/nix/hosts/disko.nix --arg device \"$device\"
 }
 
 config()
 {
     sudo nixos-generate-config --no-filesystems --root /mnt
-    cp /tmp/nix/hosts/disko.nix /mnt/etc/nixos
+    sudo cp /tmp/nix/hosts/disko.nix /mnt/etc/nixos
     # Edit configuration
-    sudo sed 's|./hardware-configuration.nix|./hardware-configuration.nix\n"${builtins.fetchTarball "https://github.com/nix-community/disko/archive/master.tar.gz"}/module.nix"\n./disko.nix|' /mnt/etc/nixos/hardware-configuration.nix -i
+    sudo sed 's|./hardware-configuration.nix|./hardware-configuration.nix\n"${builtins.fetchTarball "https://github.com/nix-community/disko/archive/master.tar.gz"}/module.nix"\n./disko.nix|' /mnt/etc/nixos/configuration.nix -i
 }
 
 install()
 {
-    host=${1:-doink-laptop}
-    sudo nixos-install --flake .#$host
+    # host=${1:-doink-laptop}
+    # sudo nixos-install --flake .#$host
+    sudo nixos-install
 }
 
 if [ $action == "help" ];then
