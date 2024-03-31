@@ -13,7 +13,18 @@
   time.timeZone = "Africa/Johannesburg";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_GB.UTF-8";
+  i18n.defaultLocale = "en_ZA.UTF-8";
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "en_ZA.UTF-8";
+    LC_IDENTIFICATION = "en_ZA.UTF-8";
+    LC_MEASUREMENT = "en_ZA.UTF-8";
+    LC_MONETARY = "en_ZA.UTF-8";
+    LC_NAME = "en_ZA.UTF-8";
+    LC_NUMERIC = "en_ZA.UTF-8";
+    LC_PAPER = "en_ZA.UTF-8";
+    LC_TELEPHONE = "en_ZA.UTF-8";
+    LC_TIME = "en_ZA.UTF-8";
+  };
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -25,7 +36,7 @@
   # Configure keymap in X11
   services.xserver = {
     xkb = {
-      layout = "us";
+      layout = "za";
       variant = "";
     };
   };
@@ -73,6 +84,14 @@
     mask = ''\xff\xff\xff\xff\x00\x00\x00\x00\xff\xff\xff'';
     magicOrExtension = ''\x7fELF....AI\x02'';
   };
+
+  # Enable automatic login for the user.
+  services.xserver.displayManager.autoLogin.enable = true;
+  services.xserver.displayManager.autoLogin.user = "doink";
+
+  # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
+  systemd.services."getty@tty1".enable = false;
+  systemd.services."autovt@tty1".enable = false;
 
   nix = {
     settings = {
