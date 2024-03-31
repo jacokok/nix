@@ -29,6 +29,7 @@
     { self
     , nixpkgs
     , nix-flatpak
+    , disko
     , home-manager
     , ...
     } @ inputs:
