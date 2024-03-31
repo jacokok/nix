@@ -29,8 +29,8 @@
     { self
     , nixpkgs
     , nix-flatpak
-    , disko
     , home-manager
+    , disko
     , ...
     } @ inputs:
     let
@@ -44,8 +44,8 @@
           modules = [
             nix-flatpak.nixosModules.nix-flatpak
             disko.nixosModules.disko
-            ./hosts/disko.nix
             ./hosts/doink-laptop
+            (import ./hosts/disko.nix { device = "/dev/nvme0n1"; })
 
             home-manager.nixosModules.home-manager
             ({ config, lib, ... }: {
@@ -70,8 +70,8 @@
           modules = [
             nix-flatpak.nixosModules.nix-flatpak
             disko.nixosModules.disko
-            ./hosts/disko.nix
             ./hosts/doink-pc
+            (import ./hosts/disko.nix { device = "/dev/nvme0n1"; })
 
             home-manager.nixosModules.home-manager
             ({ config, lib, ... }: {
