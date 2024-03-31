@@ -1,10 +1,13 @@
 { config, pkgs, inputs, outputs, ... }:
 
 {
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Enable networking
-  networking.networkmanager.enable = true;
+  networking = {
+    networkmanager.enable = true;
+    extraHosts =
+      ''
+        127.0.0.1 docxam.local
+      '';
+  };
 
   # Set your time zone.
   time.timeZone = "Africa/Johannesburg";
