@@ -17,6 +17,12 @@
     };
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+
+    # Disko
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -36,6 +42,8 @@
           # > Our main nixos configuration file <
           modules = [
             nix-flatpak.nixosModules.nix-flatpak
+            disko.nixosModules.disko
+            ./hosts/disko.nix
             ./hosts/doink-laptop
 
             home-manager.nixosModules.home-manager
@@ -60,6 +68,8 @@
           # > Our main nixos configuration file <
           modules = [
             nix-flatpak.nixosModules.nix-flatpak
+            disko.nixosModules.disko
+            ./hosts/disko.nix
             ./hosts/doink-pc
 
             home-manager.nixosModules.home-manager
