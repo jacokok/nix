@@ -38,7 +38,7 @@
     home-manager.enable = true;
     git = {
       enable = true;
-      userName = "Doink";
+      userName = "Jaco Kok";
       userEmail = "kokjaco2@gmail.com";
     };
     bash = {

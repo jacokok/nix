@@ -26,11 +26,6 @@
     LC_TIME = "en_ZA.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  services.xserver.excludePackages = [ pkgs.xterm ];
-
   programs.nix-ld.enable = true;
 
   # Configure keymap in X11
