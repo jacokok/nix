@@ -21,5 +21,8 @@
     neofetch
     onefetch
     appimage-run
+    blender-hip
+    lunacy
+    prusa-slicer
   ];
 }
