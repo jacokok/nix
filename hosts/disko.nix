@@ -8,9 +8,9 @@
       content = {
         type = "gpt";
         partitions = {
-          esp = {
+          boot = {
             name = "ESP";
-            size = "750M";
+            size = "1G";
             type = "EF00";
             content = {
               type = "filesystem";
@@ -29,9 +29,10 @@
               name = "crypted";
               # disable settings.keyFile if you want to use interactive password entry
               #passwordFile = "/tmp/secret.key"; # Interactive
+              askPassword = true;
               settings = {
                 allowDiscards = true;
-                keyFile = "/tmp/secret.key";
+                # keyFile = "/tmp/secret.key";
               };
               additionalKeyFiles = [ "/tmp/additionalSecret.key" ];
               content = {
