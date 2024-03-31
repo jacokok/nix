@@ -3,7 +3,7 @@
 {
   services.flatpak = {
     enable = true;
-    uninstallUnmanagedPackages = false;
+    uninstallUnmanaged = false;
     update = {
       onActivation = false;
       auto = {
