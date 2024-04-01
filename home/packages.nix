@@ -23,6 +23,5 @@
     appimage-run
     blender-hip
     lunacy
-    prusa-slicer
   ];
 }

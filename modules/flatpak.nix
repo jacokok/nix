@@ -25,6 +25,7 @@
       "org.nickvision.tubeconverter"
       "org.upscayl.Upscayl"
       "io.mrarm.mcpelauncher"
+      "com.prusa3d.PrusaSlicer"
     ];
   };
 }
