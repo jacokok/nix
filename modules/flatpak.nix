@@ -20,6 +20,11 @@
       "io.github.flattool.Warehouse"
       "io.github.fabrialberio.pinapp"
       "com.usebruno.Bruno"
+      "com.valvesoftware.Steam"
+      "dev.vencord.Vesktop"
+      "org.nickvision.tubeconverter"
+      "org.upscayl.Upscayl"
+      "io.mrarm.mcpelauncher"
     ];
   };
 }
