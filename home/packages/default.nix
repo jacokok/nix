@@ -8,7 +8,6 @@
     neovim
     curl
     adw-gtk3
-    gnomeExtensions.just-perfection
     firefox
     gnome.gnome-tweaks
     blackbox-terminal
