@@ -49,6 +49,11 @@
     zoxide.enable = true;
     fzf.enable = true;
     jq.enable = true;
+    gpg.enable = true;
+  };
+  services.gpg-agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-curses;
   };
 
   # Nicely reload system units when changing configs
