@@ -7,6 +7,7 @@
       ./user.nix
       ./gnome.nix
       ./packages.nix
+      ./dotnet.nix
       ./flatpak.nix
       ./fonts.nix
     ];

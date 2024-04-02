@@ -14,7 +14,6 @@
     blackbox-terminal
     nixpkgs-fmt
     nodejs_21
-    dotnetCorePackages.dotnet_8.sdk
     bottom
     distrobox
     nodePackages_latest.pnpm

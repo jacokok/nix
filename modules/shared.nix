@@ -142,12 +142,7 @@
   environment = {
     homeBinInPath = true;
     localBinInPath = true;
-    # variables = {
-    #   PATH = "$PATH:/home/doink/.dotnet/tools";
-    # };
-    # export PATH="$PATH:/home/doink/.dotnet/tools"
     sessionVariables = {
-      DOTNET_ROOT = "${pkgs.dotnet-sdk_8}";
       TERMINAL = "blackbox";
       TERM = "blackbox";
       NIXOS_OZONE_WL = "1";
