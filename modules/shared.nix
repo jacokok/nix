@@ -7,6 +7,7 @@
       ''
         127.0.0.1 docxam.local
       '';
+    firewall.trustedInterfaces = [ "docker0" ];
   };
 
   # Set your time zone.
@@ -149,6 +150,7 @@
       DOTNET_ROOT = "${pkgs.dotnet-sdk_8}";
       TERMINAL = "blackbox";
       TERM = "blackbox";
+      NIXOS_OZONE_WL = "1";
     };
   };
 
