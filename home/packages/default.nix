@@ -21,5 +21,6 @@
     appimage-run
     blender-hip
     lunacy
+    google-chrome
   ];
 }
