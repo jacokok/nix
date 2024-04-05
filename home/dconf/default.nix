@@ -30,5 +30,10 @@
     "org/gnome/shell/extensions/just-perfection" = {
       accessibility-menu = false;
     };
+
+    "org/gnome/desktop/background" = {
+      picture-uri = "${../../assets/wallpaper.png}";
+      picture-uri-dark = "${../../assets/wallpaper.png}";
+    };
   };
 }
