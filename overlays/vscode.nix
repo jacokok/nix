@@ -1,12 +1,12 @@
 final: prev: {
   vscode = prev.vscode.overrideAttrs (_: rec {
-    version = "1.87.0";
+    version = "1.88.0";
     plat = "linux-x64";
     archive_fmt = "tar.gz";
     pname = "vscode";
     src = prev.fetchurl {
       url = "https://update.code.visualstudio.com/${version}/${plat}/stable";
-      sha256 = "00izdy01d34czxfjn6rv4vg179r7f264bls5fib4caakj9bblalw";
+      sha256 = "sha256-rq8WUApP3LDbhV9gvovK20o2QbZikHwhnDf7JdcdKE8=";
       name = "VSCode_${version}_${plat}.${archive_fmt}";
     };
   });
