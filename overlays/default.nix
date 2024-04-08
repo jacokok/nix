@@ -3,8 +3,8 @@
 {
   nixpkgs = {
     overlays = [
-      (import ./temp.nix)
-      (import ./vscode.nix)
+      # (import ./temp.nix)
+      # (import ./vscode.nix)
       # (import ./dotnet.nix)
     ];
   };
