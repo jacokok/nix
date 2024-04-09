@@ -3,8 +3,7 @@
 {
   nixpkgs = {
     overlays = [
-      (import ./beekeeper.nix)
-      # (import ./temp.nix)
+      # (import ./beekeeper.nix)
       # (import ./vscode.nix)
       # (import ./dotnet.nix)
     ];

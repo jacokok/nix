@@ -22,6 +22,6 @@
     blender-hip
     lunacy
     google-chrome
-    beekeeper-studio
+    android-tools
   ];
 }
