@@ -19,8 +19,6 @@
     neofetch
     onefetch
     appimage-run
-    # (callPackage ./blender.nix { })
-    # blender-hip
     lunacy
     google-chrome
     android-tools

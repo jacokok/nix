@@ -2,6 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    blender-hip
+    (callPackage ../../packages/blender-hip.nix { })
   ];
 }
