@@ -57,6 +57,7 @@
               home-manager.users.doink = { ... }: {
                 imports = [
                   ./home
+                  ./home/hosts/doink-laptop
                 ];
               };
             })
@@ -83,6 +84,7 @@
               home-manager.users.doink = { ... }: {
                 imports = [
                   ./home
+                  ./home/hosts/doink-pc
                 ];
               };
             })

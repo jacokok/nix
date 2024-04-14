@@ -19,7 +19,7 @@
     neofetch
     onefetch
     appimage-run
-    (callPackage ./blender.nix { })
+    # (callPackage ./blender.nix { })
     # blender-hip
     lunacy
     google-chrome
