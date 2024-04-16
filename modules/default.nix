@@ -9,6 +9,6 @@
       ./packages.nix
       ./dotnet.nix
       ./flatpak.nix
-      ./fonts.nix
+      ./fonts
     ];
 }
