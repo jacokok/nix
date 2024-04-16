@@ -7,7 +7,6 @@
     vscode-fhs
     neovim
     curl
-    adw-gtk3
     firefox
     gnome.gnome-tweaks
     blackbox-terminal

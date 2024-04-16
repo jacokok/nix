@@ -13,9 +13,9 @@
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       text-scaling-factor = 1.25;
-      gtk-theme = "adw-gtk3-dark";
+      # gtk-theme = "adw-gtk3-dark";
       monospace-font-name = "FiraCode Nerd Font Mono Regular 10";
-      icon-theme = "MoreWaita";
+      # icon-theme = "MoreWaita";
     };
 
     "org/gnome/mutter" = {
