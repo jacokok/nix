@@ -3,7 +3,7 @@
 {
   services.flatpak = {
     enable = true;
-    uninstallUnmanaged = false;
+    uninstallUnmanaged = true;
     update = {
       onActivation = false;
       auto = {
@@ -22,7 +22,7 @@
       "io.github.fabrialberio.pinapp"
       "com.usebruno.Bruno"
       "com.valvesoftware.Steam"
-      "dev.vencord.Vesktop"
+      # "dev.vencord.Vesktop"
       "org.nickvision.tubeconverter"
       "org.upscayl.Upscayl"
       "io.mrarm.mcpelauncher"

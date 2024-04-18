@@ -21,5 +21,6 @@
     lunacy
     google-chrome
     android-tools
+    vesktop
   ];
 }
