@@ -6,7 +6,7 @@
     enableDefaultPackages = true;
     packages = with pkgs; [
       noto-fonts
-      corefonts
+      # corefonts
       vistafonts
       liberation_ttf
       fira-code
