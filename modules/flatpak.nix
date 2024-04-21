@@ -15,6 +15,7 @@
     packages = [
       "org.gtk.Gtk3theme.adw-gtk3-dark"
       "io.gitlab.adhami3310.Impression"
+      "io.gitlab.adhami3310.Converter"
       "io.beekeeperstudio.Studio"
       "com.github.tchx84.Flatseal"
       "com.mattjakeman.ExtensionManager"
