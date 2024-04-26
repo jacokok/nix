@@ -11,7 +11,7 @@
     gnome.gnome-tweaks
     blackbox-terminal
     nixpkgs-fmt
-    nodejs_21
+    nodejs_22
     bottom
     distrobox
     nodePackages_latest.pnpm
