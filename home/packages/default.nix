@@ -22,5 +22,6 @@
     google-chrome
     android-tools
     vesktop
+    godot_4
   ];
 }
