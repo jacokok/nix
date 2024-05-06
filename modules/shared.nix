@@ -143,8 +143,8 @@
     homeBinInPath = true;
     localBinInPath = true;
     sessionVariables = {
-      TERMINAL = "blackbox";
-      TERM = "blackbox";
+      TERMINAL = "ptyxis";
+      TERM = "ptyxis";
       NIXOS_OZONE_WL = "1";
       NIXPKGS_ALLOW_UNFREE = "1";
     };

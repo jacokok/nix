@@ -16,3 +16,9 @@ curl -O /tmp/install.sh https://raw.githubusercontent.com/jacokok/nix/master/ins
 git clone https://github.com/jacokok/nix.git /tmp/nix
 sudo nixos-rebuild switch --flake .#doink-laptop
 ```
+
+## Dconf
+
+```bash
+dconf watch /
+```

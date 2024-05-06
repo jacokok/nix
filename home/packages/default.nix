@@ -9,7 +9,8 @@
     curl
     firefox
     gnome.gnome-tweaks
-    blackbox-terminal
+    # blackbox-terminal
+    (callPackage ./ptyxis.nix { })
     nixpkgs-fmt
     nodejs_22
     bottom

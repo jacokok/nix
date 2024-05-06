@@ -4,7 +4,7 @@
     "org/gnome/shell" = {
       favorite-apps = [
         "firefox.desktop"
-        "com.raggesilver.BlackBox.desktop"
+        "org.gnome.Ptyxis.desktop"
         "org.gnome.Nautilus.desktop"
         "code.desktop"
       ];
@@ -14,7 +14,7 @@
       color-scheme = "prefer-dark";
       text-scaling-factor = 1.25;
       # gtk-theme = "adw-gtk3-dark";
-      monospace-font-name = "FiraCode Nerd Font Mono Regular 10";
+      monospace-font-name = "FiraCode Nerd Font 11";
       # icon-theme = "MoreWaita";
     };
 
@@ -42,6 +42,19 @@
       notify-process-completion = false;
       theme-dark = "Adwaita Dark";
       opacity = mkUint32 100;
+    };
+
+    "org/gnome/Ptyxis" = {
+      default-profile-uuid = "5060802acb7f4ade47135c3466391f2b";
+      profile-uuids = [ "5060802acb7f4ade47135c3466391f2b" ];
+      # restore-session = false;
+      # restore-window-size = false;
+      # use-system-font = false;
+    };
+
+    "org/gnome/Ptyxis/Profiles/5060802acb7f4ade47135c3466391f2b" = {
+      label = "Default";
+      palette = "Vs Code";
     };
   };
 }
