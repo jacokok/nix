@@ -9,13 +9,12 @@
     curl
     firefox
     gnome.gnome-tweaks
-    # blackbox-terminal
     (callPackage ./ptyxis.nix { })
     nixpkgs-fmt
-    nodejs_22
     bottom
     distrobox
-    nodePackages_latest.pnpm
+    nodejs_22
+    corepack_22
     neofetch
     onefetch
     appimage-run
