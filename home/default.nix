@@ -26,6 +26,8 @@
     shellAliases = {
       d = "distrobox";
       pm = "pnpm";
+      vim = "nvim";
+      vi = "nvim";
     };
 
     sessionPath = [ "$HOME/.dotnet/tools" ];
