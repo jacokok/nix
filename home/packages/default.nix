@@ -23,5 +23,6 @@
     android-tools
     vesktop
     godot_4
+    python3
   ];
 }
