@@ -3,10 +3,10 @@
 {
   networking = {
     networkmanager.enable = true;
-    extraHosts =
-      ''
-        127.0.0.1 docxam.local
-      '';
+    # extraHosts =
+    #   ''
+    #     127.0.0.1 docxam.local
+    #   '';
     firewall.trustedInterfaces = [ "docker0" ];
   };
 
