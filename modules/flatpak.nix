@@ -23,6 +23,7 @@
       "io.github.fabrialberio.pinapp"
       "com.usebruno.Bruno"
       "com.valvesoftware.Steam"
+      "com.icons8.Lunacy"
       # "dev.vencord.Vesktop"
       "org.nickvision.tubeconverter"
       "org.upscayl.Upscayl"

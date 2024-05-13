@@ -19,7 +19,6 @@
     neofetch
     onefetch
     appimage-run
-    lunacy
     google-chrome
     android-tools
     vesktop
