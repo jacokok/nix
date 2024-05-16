@@ -22,3 +22,7 @@ sudo nixos-rebuild switch --flake .#doink-laptop
 ```bash
 dconf watch /
 ```
+
+## Firewall
+
+sudo nixos-firewall-tool open tcp 5173

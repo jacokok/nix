@@ -41,12 +41,8 @@
   services.printing.enable = true;
   services.avahi = {
     enable = true;
-    nssmdns4 = true;
+    nssmdns = true;
     openFirewall = true;
-    publish = {
-      enable = true;
-      userServices = true;
-    };
   };
   services.printing = {
     listenAddresses = [ "*:631" ];
