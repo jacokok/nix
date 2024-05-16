@@ -50,9 +50,22 @@
     };
     bat.enable = true;
     zoxide.enable = true;
-    fzf.enable = true;
+    fzf = {
+      enable = true;
+      defaultCommand = "fd --type f";
+      fileWidgetOptions = [
+        "--preview 'bat --color=always --plain --line-range=:200 {}'"
+      ];
+      changeDirWidgetCommand = "fd --type d";
+      changeDirWidgetOptions = [ "--preview 'tree -C {} | head -200'" ];
+    };
+    # fzf.enable = true;
     jq.enable = true;
     gpg.enable = true;
+
+    zellij = {
+      enable = true;
+    };
   };
   services.gpg-agent = {
     enable = true;

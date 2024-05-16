@@ -4,6 +4,8 @@
   home.packages = with pkgs; [
     wget
     ripgrep
+    fd
+    tree
     vscode-fhs
     neovim
     curl
