@@ -26,5 +26,6 @@
     vesktop
     godot_4
     python3
+    ffmpeg
   ];
 }

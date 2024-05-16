@@ -48,7 +48,13 @@
       #   export PATH=/run/current-system/sw/bin/:/nix/var/nix/profiles/default/bin:$HOME/.nix-profile/bin:/etc/profiles/per-user/$USER/bin:$PATH
       # '';
     };
-    bat.enable = true;
+    bat = {
+      enable = true;
+      config = {
+        theme = "Visual Studio Dark+";
+        color = "always";
+      };
+    };
     zoxide.enable = true;
     fzf = {
       enable = true;
@@ -59,7 +65,6 @@
       changeDirWidgetCommand = "fd --type d";
       changeDirWidgetOptions = [ "--preview 'tree -C {} | head -200'" ];
     };
-    # fzf.enable = true;
     jq.enable = true;
     gpg.enable = true;
 
