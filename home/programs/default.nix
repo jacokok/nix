@@ -3,5 +3,6 @@
     ./git.nix
     ./firefox.nix
     ./starship.nix
+    ./zellij
   ];
 }
