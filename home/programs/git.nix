@@ -9,6 +9,9 @@
         key = "7ABD453C60720B82";
         signByDefault = true;
       };
+      extraConfig = {
+        core.editor = "nvim";
+      };
     };
   };
 }

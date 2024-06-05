@@ -7,7 +7,6 @@
     fd
     tree
     vscode-fhs
-    neovim
     curl
     firefox
     gnome.gnome-tweaks
@@ -18,7 +17,7 @@
     distrobox
     nodejs_22
     corepack_22
-    neofetch
+    fastfetch
     onefetch
     appimage-run
     google-chrome
@@ -27,5 +26,7 @@
     godot_4
     python3
     ffmpeg
+    aseprite
+    krita
   ];
 }
