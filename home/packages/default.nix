@@ -6,7 +6,6 @@
     ripgrep
     fd
     tree
-    vscode-fhs
     curl
     firefox
     gnome.gnome-tweaks
