@@ -4,6 +4,7 @@ let
   extensions = with pkgs.gnomeExtensions; [
     just-perfection
     caffeine
+    # tray-icons-reloaded
   ];
 in
 {
