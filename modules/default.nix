@@ -11,6 +11,5 @@
       ./flatpak.nix
       ./fonts
       ./nh.nix
-      ./ascii-workaround.nix
     ];
 }
