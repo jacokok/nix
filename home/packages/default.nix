@@ -27,5 +27,6 @@
     ffmpeg
     aseprite
     krita
+    steam-run
   ];
 }
