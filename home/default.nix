@@ -10,6 +10,7 @@
     ./extensions
     ./dconf
     ./theme
+    ./files
   ];
 
   nixpkgs = {
