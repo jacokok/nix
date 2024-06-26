@@ -25,7 +25,6 @@
     godot_4
     python3
     ffmpeg
-    aseprite
     krita
     steam-run
   ];
