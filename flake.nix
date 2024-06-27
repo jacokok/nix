@@ -23,6 +23,8 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
   outputs =
@@ -61,7 +63,6 @@
                 ];
               };
             })
-
             (import ./overlays)
           ];
         };
