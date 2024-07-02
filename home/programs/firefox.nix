@@ -25,6 +25,7 @@
           "svg.context-properties.content.enabled" = true;
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "browser.tabs.drawInTitlebar" = true;
+          "media.eme.enabled" = true;
         };
       };
     };

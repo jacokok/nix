@@ -24,11 +24,11 @@
       "com.usebruno.Bruno"
       "com.valvesoftware.Steam"
       "com.icons8.Lunacy"
-      # "dev.vencord.Vesktop"
       "org.nickvision.tubeconverter"
       "org.upscayl.Upscayl"
       "io.mrarm.mcpelauncher"
       "com.prusa3d.PrusaSlicer"
+      "com.usebottles.bottles"
     ];
   };
 }
