@@ -29,6 +29,7 @@
       "io.mrarm.mcpelauncher"
       "com.prusa3d.PrusaSlicer"
       "com.usebottles.bottles"
+      "tv.kodi.Kodi"
     ];
   };
 }
