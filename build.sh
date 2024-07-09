@@ -6,6 +6,12 @@ sudo nixos-rebuild build --flake .
 sudo nixos-rebuild build --flake . --option eval-cache false
 sudo nixos-rebuild build --flake . --option show-trace true --option eval-cache false
 
+# Manual optimise store
+nix-store --optimise
+
+# GC remove all but current generation
+sudo nix-collect-garbage -d
+
 # sudo nixos-rebuild boot
 # sudo poweroff --reboot
 # sudo nix-collect-garbage -d
