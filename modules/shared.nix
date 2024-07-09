@@ -104,25 +104,32 @@
   nix = {
     settings = {
       experimental-features = "nix-command flakes";
-      auto-optimise-store = true;
     };
-    # gc = {
-    #   automatic = true;
-    #   dates = "weekly";
-    #   options = "--delete-older-than 7d";
-    # };
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+    optimise.automatic = true;
   };
+
+  # system.autoUpgrade = {
+  #   enable = true;
+  #   flake = inputs.self.outPath;
+  #   flags = [
+  #     "--update-input"
+  #     "nixpkgs"
+  #     "-L" # print build logs
+  #   ];
+  #   dates = "02:00";
+  #   randomizedDelaySec = "45min";
+  # };
 
   system.autoUpgrade = {
     enable = true;
-    flake = inputs.self.outPath;
-    flags = [
-      "--update-input"
-      "nixpkgs"
-      "-L" # print build logs
-    ];
-    dates = "02:00";
-    randomizedDelaySec = "45min";
+    allowReboot = true;
+    dates = "02:30";
+    flake = "github:jacokok/nix";
   };
 
   virtualisation = {

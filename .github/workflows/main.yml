@@ -4,7 +4,6 @@ on:
   schedule:
     # Runs at 3 minutes past the hour, every 12 hours
     - cron: "3 */12 * * *"
-
   workflow_dispatch:
 
 jobs:
