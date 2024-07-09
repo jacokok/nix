@@ -13,11 +13,11 @@
     gnome-photos
     gnome-tour
     gnome-console
-  ]) ++ (with pkgs.gnome; [
-    cheese
-    gnome-music
     geary
     epiphany
+    cheese
+  ]) ++ (with pkgs.gnome; [
+    gnome-music
   ]);
 
   programs.dconf.enable = true;

@@ -6,4 +6,9 @@
 # sudo nixos-rebuild switch --flake .#doink-laptop
 # sudo nixos-rebuild switch --flake .#doink
 # sudo nixos-rebuild switch --flake .
+# sudo nixos-rebuild build --flake . --option eval-cache false
+
+sudo nixos-rebuild switch --flake . --option eval-cache false
+
+# sudo nixos-rebuild build --flake . --option eval-cache false
 nh os switch -u .

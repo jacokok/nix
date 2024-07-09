@@ -8,7 +8,7 @@
     tree
     curl
     firefox
-    gnome.gnome-tweaks
+    gnome-tweaks
     ptyxis
     # (callPackage ./ptyxis.nix { })
     nixpkgs-fmt
