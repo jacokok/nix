@@ -27,5 +27,6 @@
     ffmpeg
     krita
     steam-run
+    zed-editor
   ];
 }

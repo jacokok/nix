@@ -26,3 +26,9 @@ dconf watch /
 ## Firewall
 
 sudo nixos-firewall-tool open tcp 5173
+
+## Update
+
+```bash
+sudo nixos-rebuild switch --flake .
+```
