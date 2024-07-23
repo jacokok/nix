@@ -5,6 +5,7 @@
     [
       ./shared.nix
       ./user.nix
+      ./sops.nix
       ./gnome.nix
       ./packages.nix
       ./dotnet.nix

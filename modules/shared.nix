@@ -125,7 +125,7 @@
 
   system.autoUpgrade = {
     enable = true;
-    allowReboot = true;
+    allowReboot = false;
     dates = "02:30";
     flake = "github:jacokok/nix";
   };

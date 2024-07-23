@@ -11,6 +11,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # SOPS
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     firefox-gnome-theme = {
       url = "github:rafaelmardojai/firefox-gnome-theme";
       flake = false;
@@ -30,6 +36,7 @@
     , nixpkgs
     , nix-flatpak
     , home-manager
+    , sops-nix
     , disko
     , ...
     } @ inputs:
@@ -44,9 +51,9 @@
           modules = [
             nix-flatpak.nixosModules.nix-flatpak
             disko.nixosModules.disko
+            sops-nix.nixosModules.sops
             ./hosts/doink-laptop
             (import ./hosts/disko.nix { device = "/dev/nvme0n1"; })
-
             home-manager.nixosModules.home-manager
             ({ config, lib, ... }: {
               home-manager.useGlobalPkgs = true;
@@ -71,9 +78,9 @@
           modules = [
             nix-flatpak.nixosModules.nix-flatpak
             disko.nixosModules.disko
+            sops-nix.nixosModules.sops
             ./hosts/doink-pc
             (import ./hosts/disko.nix { device = "/dev/nvme0n1"; })
-
             home-manager.nixosModules.home-manager
             ({ config, lib, ... }: {
               home-manager.useGlobalPkgs = true;
