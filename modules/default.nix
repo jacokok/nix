@@ -11,5 +11,6 @@
       ./dotnet.nix
       ./flatpak.nix
       ./fonts
+      ./ld.nix
     ];
 }

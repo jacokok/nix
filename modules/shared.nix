@@ -27,8 +27,6 @@
     LC_TIME = "en_ZA.UTF-8";
   };
 
-  programs.nix-ld.enable = true;
-
   # Configure keymap in X11
   services.xserver = {
     xkb = {
