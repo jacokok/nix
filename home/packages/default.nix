@@ -7,7 +7,7 @@
     fd
     tree
     curl
-    firefox
+    # firefox
     gnome-tweaks
     ptyxis
     # (callPackage ./ptyxis.nix { })
