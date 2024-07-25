@@ -28,5 +28,7 @@
     krita
     steam-run
     zed-editor
+    nix-search-cli
+    # lunacy middle click bug using flatpak isntead
   ];
 }
