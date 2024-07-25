@@ -30,5 +30,6 @@
     zed-editor
     nix-search-cli
     # lunacy middle click bug using flatpak isntead
+    inkscape
   ];
 }
