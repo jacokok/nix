@@ -5,5 +5,6 @@
     morewaita-icon-theme
     adw-gtk3
     sops
+    quickemu
   ];
 }
