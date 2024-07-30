@@ -51,7 +51,12 @@
   };
 
   hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
+
+  security = {
+    rtkit.enable = true;
+    pam.services.login.enableGnomeKeyring = true;
+  };
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
