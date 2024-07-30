@@ -46,7 +46,7 @@
     {
       nixosConfigurations = {
         doink-laptop = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
+          specialArgs = { inherit inputs outputs; username = "doink"; };
           # > Our main nixos configuration file <
           modules = [
             nix-flatpak.nixosModules.nix-flatpak
@@ -73,7 +73,7 @@
           ];
         };
         doink-pc = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; };
+          specialArgs = { inherit inputs outputs; username = "doink"; };
           # > Our main nixos configuration file <
           modules = [
             nix-flatpak.nixosModules.nix-flatpak

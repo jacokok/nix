@@ -12,5 +12,6 @@
       ./flatpak.nix
       ./fonts
       ./ld.nix
+      ./libvirt.nix
     ];
 }
