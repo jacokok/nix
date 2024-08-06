@@ -29,7 +29,14 @@
       pm = "pnpm";
     };
 
-    sessionPath = [ "$HOME/.dotnet/tools" ];
+    sessionVariables = {
+      PNPM_HOME = "$HOME/.pnpm-global/bin";
+    };
+
+    sessionPath = [
+      "$HOME/.dotnet/tools"
+      "$HOME/.pnpm-global/bin"
+    ];
   };
 
   home.file.".face" = {
