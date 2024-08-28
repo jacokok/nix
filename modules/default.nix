@@ -13,5 +13,6 @@
       ./fonts
       ./ld.nix
       ./libvirt.nix
+      ./tailscale.nix
     ];
 }
