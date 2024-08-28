@@ -32,5 +32,6 @@
     # lunacy middle click bug using flatpak isntead
     inkscape
     wl-clipboard
+    nmap
   ];
 }
