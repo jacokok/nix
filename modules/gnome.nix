@@ -18,7 +18,6 @@
     geary
     epiphany
     cheese
-  ]) ++ (with pkgs.gnome; [
     gnome-music
   ]);
 
