@@ -51,7 +51,7 @@
       userSettings = {
         "editor.smoothScrolling" = true;
         "editor.acceptSuggestionOnCommitCharacter" = false;
-        "editor.fontFamily" = "'FiraCode Nerd Font'; 'Fira Code'; Consolas";
+       "editor.fontFamily" = "'FiraCode Nerd Font', 'Fira Code', Consolas";
         "editor.fontLigatures" = true;
         "editor.minimap.maxColumn" = 100;
         "editor.cursorBlinking" = "smooth";
