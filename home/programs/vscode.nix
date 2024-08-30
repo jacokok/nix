@@ -51,28 +51,35 @@
       userSettings = {
         "editor.smoothScrolling" = true;
         "editor.acceptSuggestionOnCommitCharacter" = false;
-        "editor.fontFamily" = "'FiraCode Nerd Font', 'Fira Code', Consolas";
+        "editor.fontFamily" = "'FiraCode Nerd Font'; 'Fira Code'; Consolas";
         "editor.fontLigatures" = true;
         "editor.minimap.maxColumn" = 100;
         "editor.cursorBlinking" = "smooth";
         "editor.cursorSmoothCaretAnimation" = "on";
         "editor.semanticHighlighting.enabled" = true;
         "editor.formatOnSave" = true;
+        "editor.minimap.showSlider" = "always";
+        "editor.linkedEditing" = true;
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
 
         "workbench.list.smoothScrolling" = true;
         "workbench.iconTheme" = "material-icon-theme";
         "workbench.startupEditor" = "readme";
         "workbench.layoutControl.enabled" = false;
         "workbench.sideBar.location" = "right";
+        "workbench.editor.empty.hint" = "hidden";
         "workbench.colorCustomizations" = {
           "statusBar.background" = "#323233";
           "statusBarItem.remoteBackground" = "#323233";
         };
 
         "breadcrumbs.enabled" = false;
+
         "window.titleBarStyle" = "custom";
         "window.zoomLevel" = 2;
         "window.commandCenter" = false;
+        "window.title" = "\${activeEditorShort}\${separator}\${rootName}\${separator}";
+
         "explorer.confirmDelete" = false;
 
         "git.confirmSync" = false;
@@ -80,8 +87,56 @@
         "git.autofetch" = true;
         "git.openRepositoryInParentFolders" = "never";
 
-        "extensions.autoCheckUpdates" = false;
-        "extensions.autoUpdate" = false;
+        "[csharp]" = {
+          "editor.defaultFormatter" = "ms-dotnettools.csharp";
+          "editor.formatOnSave" = true;
+        };
+
+        "csharp.semanticHighlighting.enabled" = true;
+        "csharp.suppressHiddenDiagnostics" = false;
+        "csharp.maxProjectFileCountForDiagnosticAnalysis" = 0;
+        "dotnet.completion.showCompletionItemsFromUnimportedNamespaces" = true;
+        "dotnetAcquisitionExtension.enableTelemetry" = false;
+
+        "[typescript]" = {
+          "editor.tabSize" = 2;
+        };
+        "typescript.updateImportsOnFileMove.enabled" = "always";
+
+        "[svelte]" = {
+          "editor.defaultFormatter" = "svelte.svelte-vscode";
+          "editor.formatOnSave" = true;
+          "editor.tabSize" = 2;
+        };
+        "svelte.enable-ts-plugin" = true;
+
+        "[nix]" = {
+          "editor.insertSpaces" = true;
+          "editor.tabSize" = 2;
+          "editor.formatOnSave" = true;
+        };
+        "[javascript]" = {
+          "editor.tabSize" = 2;
+        };
+        "javascript.updateImportsOnFileMove.enabled" = "always";
+
+        "eslint.format.enable" = true;
+        "prettier.singleQuote" = false;
+
+        "[jsonc]" = {
+          "editor.defaultFormatter" = "vscode.json-language-features";
+        };
+        "[markdown]" = {
+          "editor.defaultFormatter" = "yzhang.markdown-all-in-one";
+        };
+        "[json]" = {
+          "editor.tabSize" = 2;
+        };
+        "yaml.schemaStore.enable" = true;
+
+        "diffEditor.ignoreTrimWhitespace" = true;
+        "redhat.telemetry.enabled" = true;
+        "security.workspace.trust.untrustedFiles" = "open";
       };
     };
   };
