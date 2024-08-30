@@ -31,9 +31,7 @@
 
       extensions = with pkgs.vscode-marketplace; [
         ms-azuretools.vscode-docker
-        # ms-dotnettools.vscode-dotnet-runtime
-        #ms-dotnettools.csharp
-        # ms-dotnettools.csdevkit
+        ms-dotnettools.vscode-dotnet-runtime
         jacokok.csharp-stretch
         streetsidesoftware.code-spell-checker
         codeium.codeium
@@ -66,7 +64,6 @@
       ++
       (with pkgs.vscode-extensions;
       [
-        ms-dotnettools.vscode-dotnet-runtime
         ms-dotnettools.csharp
         ms-dotnettools.csdevkit
       ]);
@@ -98,9 +95,13 @@
         "window.zoomLevel" = 2;
         "window.commandCenter" = false;
         "explorer.confirmDelete" = false;
-        "git.mergeEditor" = true;
-        "git.autofetch" = true;
-        "git.openRepositoryInParentFolders" = "never";
+        "git" = {
+          "confirmSync" = false;
+          "mergeEditor" = true;
+          "autofetch" = true;
+          "openRepositoryInParentFolders" = "never";
+        };
+
       };
     };
   };
