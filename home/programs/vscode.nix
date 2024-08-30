@@ -11,6 +11,7 @@
       enableExtensionUpdateCheck = false;
 
       extensions = (with (pkgs.forVSCodeVersion pkgs.vscode.version).vscode-marketplace; [
+        ms-dotnettools.csdevkit
         ms-dotnettools.vscode-dotnet-runtime
         # ms-dotnettools.csharp
         # ms-dotnettools.csdevkit
@@ -44,7 +45,6 @@
         redhat.vscode-yaml
         #codeium.codeium
       ]) ++ (with pkgs.vscode-extensions; [
-        ms-dotnettools.csdevkit
         ms-dotnettools.csharp
       ]);
 
