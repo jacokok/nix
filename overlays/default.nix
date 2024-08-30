@@ -3,7 +3,6 @@
 {
   nixpkgs = {
     overlays = [
-      inputs.nix-flatpak.nixosModules.nix-flatpak
       inputs.nix-vscode-extensions.overlays.default
       # (import ./chrome.nix)
       # (import ./beekeeper.nix)
