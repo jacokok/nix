@@ -1,0 +1,32 @@
+name: Update vscode extensions
+
+on:
+  schedule:
+    # Runs at 20 minutes past the hour, every 12 hours
+    - cron: "20 */12 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: cachix/install-nix-action@v27
+
+      - run: nix run "github:nix-community/nix4vscode" -- home/programs/vscode/config.toml -o home/programs/vscode/vscode_plugins.nix
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Bump vscode_plugins.nix
+          branch: master
+          commit_options: "--no-verify --signoff"
+          file_pattern: home/programs/vscode/vscode_plugins.nix
+          commit_user_name: Flake Bot vscode
+          commit_author: Flake Bot vscode <actions@github.com>
+          skip_dirty_check: false
+          skip_fetch: true
