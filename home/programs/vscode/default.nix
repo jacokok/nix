@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
+let
+  plugins = (import ./vscode_plugins.nix) { pkgs = pkgs; lib = lib; };
+in
+with pkgs;
 {
   programs = {
     vscode = {
@@ -46,6 +50,8 @@
         #codeium.codeium
       ]) ++ (with pkgs.vscode-extensions; [
         ms-dotnettools.csharp
+      ]) ++ (with pkgs.vscode-marketplace; [
+        plugins.vscodevim.vim
       ]);
 
       userSettings = {

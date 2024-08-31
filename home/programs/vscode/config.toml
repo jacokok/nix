@@ -1,0 +1,9 @@
+vscode_version = "1.90.0"
+
+[[extensions]]
+publisher_name = "vscodevim"
+extension_name = "vim"
+
+[[extensions]]
+publisher_name = "ms-vscode-remote"
+extension_name = "remote-ssh"
