@@ -14,9 +14,9 @@ with pkgs;
       # enableUpdateCheck = false;
       # enableExtensionUpdateCheck = false;
 
-      extensions = (with pkgs.vscode-marketplace; [
+      extensions = (with vscode-marketplace; [
         plugins.ms-dotnettools.csdevkit
-        ms-dotnettools.vscode-dotnet-runtime
+        plugins.ms-dotnettools.vscode-dotnet-runtime
       ]) ++ (with pkgs.vscode-extensions; [
         ms-dotnettools.csharp
       ]);

@@ -9,7 +9,14 @@ merge
   (merge
     (merge
       (merge
-      { }
+      {
+        "ms-dotnettools"."vscode-dotnet-runtime" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "vscode-dotnet-runtime";
+          publisher = "ms-dotnettools";
+          version = "2.1.5";
+          sha256 = "04hg772iihrkr6k3iairlagij0i6wj1kpjmf5igfnpgzi4kmraz8";
+        };
+      }
         (lib.attrsets.optionalAttrs (isLinux && (isi686 || isx86_64)) {
           "ms-dotnettools"."csharp" = vscode-utils.extensionFromVscodeMarketplace {
             name = "csharp";
