@@ -1,9 +1,9 @@
-vscode_version = "1.90.0"
+vscode_version = "1.92.2"
 
 [[extensions]]
-publisher_name = "vscodevim"
-extension_name = "vim"
+publisher_name = "ms-dotnettools"
+extension_name = "csdevkit"
 
 [[extensions]]
-publisher_name = "ms-vscode-remote"
-extension_name = "remote-ssh"
+publisher_name = "ms-dotnettools"
+extension_name = "csharp"
