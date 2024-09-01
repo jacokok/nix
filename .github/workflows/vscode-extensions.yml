@@ -1,9 +1,9 @@
 name: Update vscode extensions
 
 on:
-  schedule:
-    # Runs at 20 minutes past the hour, every 12 hours
-    - cron: "20 */12 * * *"
+  # schedule:
+  #   # Runs at 20 minutes past the hour, every 12 hours
+  #   - cron: "20 */12 * * *"
   workflow_dispatch:
 
 jobs:
