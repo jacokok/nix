@@ -1,23 +1,11 @@
-{ pkgs, lib, ... }:
-let
-  plugins = (import ./vscode_plugins.nix) { pkgs = pkgs; lib = lib; };
-in
-with pkgs;
+{ pkgs, ... }:
 {
   programs = {
     vscode = {
       enable = true;
-
       package = pkgs.vscode;
-
       mutableExtensionsDir = true;
-      # enableUpdateCheck = false;
-      # enableExtensionUpdateCheck = false;
-
-      extensions = (with vscode-marketplace; [
-        plugins.ms-dotnettools.csdevkit
-        plugins.ms-dotnettools.vscode-dotnet-runtime
-      ]) ++ (with pkgs.vscode-extensions; [
+      extensions = (with pkgs.vscode-extensions; [
         ms-dotnettools.csharp
       ]);
 
