@@ -1,17 +1,4 @@
-{ pkgs, ... }:
+{ inputs, vars, ... }:
 {
-  programs = {
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-      viAlias = true;
-      vimAlias = true;
-      plugins = with pkgs.vimPlugins; [
-        adwaita-nvim
-      ];
-      extraConfig = ''
-        colorscheme adwaita
-      '';
-    };
-  };
+  home.packages = [ inputs.nixvim-flake.packages.${vars.system}.default ];
 }

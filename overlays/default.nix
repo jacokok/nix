@@ -8,6 +8,7 @@
       # (import ./beekeeper.nix)
       # (import ./vscode.nix)
       # (import ./dotnet.nix)      
+      # (import ./neovim.nix)
     ];
   };
 }

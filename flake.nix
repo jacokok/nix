@@ -17,6 +17,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixvim-flake =
+      {
+        url = "github:jacokok/nvim";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
+
     # nix-vscode-extensions = {
     #   url = "github:nix-community/nix-vscode-extensions";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -37,74 +43,27 @@
   };
 
   outputs =
-    { self
+    inputs @ { self
     , nixpkgs
     , nix-flatpak
+    , nixos-hardware
     , home-manager
     , sops-nix
+    , nixvim-flake
     , disko
-      # , nix-vscode-extensions
     , ...
-    } @ inputs:
+    }:
     let
-      inherit (self) outputs;
+      vars = {
+        user = "doink";
+        system = "x86_64-linux";
+      };
     in
     {
-      nixosConfigurations = {
-        doink-laptop = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; username = "doink"; };
-          # > Our main nixos configuration file <
-          modules = [
-            nix-flatpak.nixosModules.nix-flatpak
-            disko.nixosModules.disko
-            sops-nix.nixosModules.sops
-            ./hosts/doink-laptop
-            (import ./hosts/disko.nix { device = "/dev/nvme0n1"; })
-            home-manager.nixosModules.home-manager
-            ({ config, lib, ... }: {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = {
-                inherit inputs;
-              };
-              home-manager.users.doink = { ... }: {
-                imports = [
-                  ./home
-                  ./home/hosts/doink-laptop
-                ];
-              };
-            })
-
-            (import ./overlays)
-          ];
-        };
-        doink-pc = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs outputs; username = "doink"; };
-          # > Our main nixos configuration file <
-          modules = [
-            nix-flatpak.nixosModules.nix-flatpak
-            disko.nixosModules.disko
-            sops-nix.nixosModules.sops
-            ./hosts/doink-pc
-            (import ./hosts/disko.nix { device = "/dev/nvme0n1"; })
-            home-manager.nixosModules.home-manager
-            ({ config, lib, ... }: {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = {
-                inherit inputs;
-              };
-              home-manager.users.doink = { ... }: {
-                imports = [
-                  ./home
-                  ./home/hosts/doink-pc
-                ];
-              };
-            })
-
-            (import ./overlays)
-          ];
-        };
-      };
+      nixosConfigurations = (
+        import ./hosts {
+          inherit inputs nixpkgs home-manager vars;
+        }
+      );
     };
 }
