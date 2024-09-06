@@ -9,4 +9,9 @@
   sops.secrets.test = {
     owner = config.users.users.doink.name;
   };
+
+  sops.secrets.ansibleVault = {
+    owner = config.users.users.doink.name;
+    path = "${config.users.users.doink.home}/.ansible/.vault_password.txt";
+  };
 }
