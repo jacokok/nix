@@ -1,6 +1,6 @@
 # Nix
 
-My nix setups
+![NixOS](https://img.shields.io/badge/NixOS-Unstable-informational.svg?style=flat&logo=nixos)
 
 ## Install
 

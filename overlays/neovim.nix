@@ -1,6 +1,6 @@
-{ inputs, ... }:
+{ inputs, vars, ... }:
 {
   overlays = (final: prev: {
-    neovim = inputs.nixvim-flake.packages.${prev.system}.default;
+    neovim = inputs.nixvim-flake.packages.${vars.system}.default;
   });
 }
