@@ -1,6 +1,6 @@
 final: prev: {
   vscode = prev.vscode.overrideAttrs (_: rec {
-    version = "1.88.0";
+    version = "1.8845645646.0";
     plat = "linux-x64";
     archive_fmt = "tar.gz";
     pname = "vscode";

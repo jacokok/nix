@@ -31,6 +31,7 @@
       "com.usebottles.bottles"
       "tv.kodi.Kodi"
       "com.redis.RedisInsight"
+      "org.raspberrypi.rpi-imager"
     ];
   };
 }

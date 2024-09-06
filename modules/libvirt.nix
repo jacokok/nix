@@ -25,6 +25,7 @@
   ];
   programs.virt-manager.enable = true;
 
+  # TODO: Move this to home manager side
   home-manager.users.${vars.user} = {
     dconf.settings = {
       "org/virt-manager/virt-manager/connections" = {

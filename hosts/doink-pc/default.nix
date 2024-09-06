@@ -1,10 +1,11 @@
-{ config, pkgs, inputs, home-manager, ... }:
+{ config, pkgs, inputs, outputs, vars, ... }:
 
 {
   imports =
     [
       ./hardware-configuration.nix
       ../../modules
+      inputs.home-manager.nixosModules.home-manager
     ];
 
   # Bootloader.
@@ -20,4 +21,11 @@
   };
 
   networking.hostName = "doink-pc";
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs vars outputs; };
+    users = {
+      doink = import ../../home/hosts/doink-pc;
+    };
+  };
 }

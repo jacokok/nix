@@ -1,7 +1,8 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    (callPackage ../../packages/blender.nix { })
+  imports = [
+    ../../default.nix
+    ./home.nix
   ];
 }

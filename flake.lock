@@ -3,7 +3,7 @@
     "devshell": {
       "inputs": {
         "nixpkgs": [
-          "nixvim-flake",
+          "nvim",
           "nixvim",
           "nixpkgs"
         ]
@@ -93,7 +93,7 @@
     "flake-parts_2": {
       "inputs": {
         "nixpkgs-lib": [
-          "nixvim-flake",
+          "nvim",
           "nixvim",
           "nixpkgs"
         ]
@@ -133,18 +133,18 @@
     "git-hooks": {
       "inputs": {
         "flake-compat": [
-          "nixvim-flake",
+          "nvim",
           "nixvim",
           "flake-compat"
         ],
         "gitignore": "gitignore",
         "nixpkgs": [
-          "nixvim-flake",
+          "nvim",
           "nixvim",
           "nixpkgs"
         ],
         "nixpkgs-stable": [
-          "nixvim-flake",
+          "nvim",
           "nixvim",
           "nixpkgs"
         ]
@@ -166,7 +166,7 @@
     "gitignore": {
       "inputs": {
         "nixpkgs": [
-          "nixvim-flake",
+          "nvim",
           "nixvim",
           "git-hooks",
           "nixpkgs"
@@ -193,11 +193,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1725180166,
-        "narHash": "sha256-fzssXuGR/mCeGbzM1ExaTqDz7QDGta3WA4jJsZyRruo=",
+        "lastModified": 1725628988,
+        "narHash": "sha256-Y6TBMTGu4bddUwszGjlcOuN0soVc1Gv43hp+1sT/GNI=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "471e3eb0a114265bcd62d11d58ba8d3421ee68eb",
+        "rev": "127ccc3eb7e36fa75e8c3fbd8a343154f66cc1c6",
         "type": "github"
       },
       "original": {
@@ -209,7 +209,7 @@
     "home-manager_2": {
       "inputs": {
         "nixpkgs": [
-          "nixvim-flake",
+          "nvim",
           "nixvim",
           "nixpkgs"
         ]
@@ -231,7 +231,7 @@
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
-          "nixvim-flake",
+          "nvim",
           "nixvim",
           "nixpkgs"
         ]
@@ -365,7 +365,30 @@
         "type": "github"
       }
     },
-    "nixvim-flake": {
+    "nuschtosSearch": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nvim",
+          "nixvim",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1724584782,
+        "narHash": "sha256-7FfHv7b1jwMPSu9SPY9hdxStk8E6EeSwzqdvV69U4BM=",
+        "owner": "NuschtOS",
+        "repo": "search",
+        "rev": "5a08d691de30b6fc28d58ce71a5e420f2694e087",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NuschtOS",
+        "repo": "search",
+        "type": "github"
+      }
+    },
+    "nvim": {
       "inputs": {
         "flake-parts": "flake-parts",
         "nixpkgs": [
@@ -387,29 +410,6 @@
         "type": "github"
       }
     },
-    "nuschtosSearch": {
-      "inputs": {
-        "flake-utils": "flake-utils",
-        "nixpkgs": [
-          "nixvim-flake",
-          "nixvim",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1724584782,
-        "narHash": "sha256-7FfHv7b1jwMPSu9SPY9hdxStk8E6EeSwzqdvV69U4BM=",
-        "owner": "NuschtOS",
-        "repo": "search",
-        "rev": "5a08d691de30b6fc28d58ce71a5e420f2694e087",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NuschtOS",
-        "repo": "search",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "disko": "disko",
@@ -418,7 +418,7 @@
         "nix-flatpak": "nix-flatpak",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",
-        "nixvim-flake": "nixvim-flake",
+        "nvim": "nvim",
         "sops-nix": "sops-nix"
       }
     },
@@ -461,7 +461,7 @@
     "treefmt-nix": {
       "inputs": {
         "nixpkgs": [
-          "nixvim-flake",
+          "nvim",
           "nixvim",
           "nixpkgs"
         ]

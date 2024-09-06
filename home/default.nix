@@ -2,6 +2,7 @@
 , lib
 , config
 , pkgs
+, outputs
 , ...
 }: {
   imports = [
@@ -14,6 +15,10 @@
   ];
 
   nixpkgs = {
+    overlays = [
+      outputs.overlays.additions
+      outputs.overlays.modifications
+    ];
     config = {
       allowUnfree = true;
       allowUnfreePredicate = _: true;
@@ -27,6 +32,8 @@
     shellAliases = {
       d = "distrobox";
       pm = "pnpm";
+      vi = "nvim";
+      vim = "nvim";
     };
 
     sessionVariables = {

@@ -1,14 +1,10 @@
-{ inputs, config, pkgs, lib, ... }:
+{ inputs, ... }: {
+  additions = final: _prev: import ../pkgs final.pkgs;
 
-{
-  nixpkgs = {
-    overlays = [
-      # inputs.nix-vscode-extensions.overlays.default
-      # (import ./chrome.nix)
-      # (import ./beekeeper.nix)
-      # (import ./vscode.nix)
-      # (import ./dotnet.nix)      
-      (import ./neovim.nix)
-    ];
+  modifications = final: prev: {
+    # example = prev.example.overrideAttrs (oldAttrs: rec {
+    # ...
+    # });
+    nvim = inputs.nvim.packages.${final.system}.default;
   };
 }

@@ -1,14 +1,6 @@
-{ inputs, vars, ... }:
+{ inputs, vars, pkgs, ... }:
 {
-  # home.packages = [ inputs.nixvim-flake.packages.${vars.system}.default ];
-
-  programs = {
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-      viAlias = true;
-      vimAlias = true;
-      vimdiffAlias = true;
-    };
-  };
+  home.packages = with pkgs; [
+    nvim
+  ];
 }

@@ -17,11 +17,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim-flake =
-      {
-        url = "github:jacokok/nvim";
-        inputs.nixpkgs.follows = "nixpkgs";
-      };
+    nvim = {
+      url = "github:jacokok/nvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # nix-vscode-extensions = {
     #   url = "github:nix-community/nix-vscode-extensions";
@@ -43,26 +42,29 @@
   };
 
   outputs =
-    inputs @ { self
+    { self
     , nixpkgs
     , nix-flatpak
     , nixos-hardware
     , home-manager
     , sops-nix
-    , nixvim-flake
+    , nvim
     , disko
     , ...
-    }:
+    } @ inputs:
     let
+      inherit (self) outputs;
       vars = {
         user = "doink";
         system = "x86_64-linux";
       };
     in
     {
+      overlays = import ./overlays { inherit inputs outputs; };
+
       nixosConfigurations = (
         import ./hosts {
-          inherit inputs nixpkgs home-manager vars;
+          inherit inputs outputs nixpkgs vars;
         }
       );
     };
