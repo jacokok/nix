@@ -267,11 +267,11 @@
     },
     "nixos-hardware": {
       "locked": {
-        "lastModified": 1725477728,
-        "narHash": "sha256-ahej1VRqKmWbG7gewty+GlrSBEeGY/J2Zy8Nt8+3fdg=",
+        "lastModified": 1725716377,
+        "narHash": "sha256-7NzW9O/cAw7iWzRfh7Oo/SuSudL4a1YTKS6yoh3tMck=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "880be1ab837e1e9fe0449dae41ac4d034694d4ce",
+        "rev": "04a1cda0c1725094a4db703cccbb956b7558f5a6",
         "type": "github"
       },
       "original": {
@@ -352,11 +352,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1725669404,
-        "narHash": "sha256-Bbp1GVgKVLz9mSfzgwBdQ96Pxm+RgPEdYjS4kKSFrAI=",
+        "lastModified": 1725671303,
+        "narHash": "sha256-PVMrJ90B5plMxlhFUKZMYjTmBJScdTDbZ1ofrYyRQQo=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "86a4021597c860a6cd1953305a9995f44e60d4d5",
+        "rev": "c4135d720a5a57b7ddbd7ee918544c26b2c6f732",
         "type": "github"
       },
       "original": {
@@ -397,11 +397,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1725673397,
-        "narHash": "sha256-QqCPPHKBb2I07Z0X3N1LBgwmCb32ffANfj98lmhu9BM=",
+        "lastModified": 1725733776,
+        "narHash": "sha256-IjjD4jA1QirGcCG/sbYjf7dmpjIrZzJHOrVCx6Atbqc=",
         "owner": "jacokok",
         "repo": "nvim",
-        "rev": "6ec38aa082a2c05fd64994923359b1174c11fd19",
+        "rev": "1dab7e5ad1cee2a1e2e667ff6ec984e8af6cf097",
         "type": "github"
       },
       "original": {
