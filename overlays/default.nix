@@ -6,5 +6,7 @@
     # ...
     # });
     nvim = inputs.nvim.packages.${final.system}.default;
+
+    # ms-dotnettools.csharp = prev.vscode-extensions.ms-dotnettools.csharp.overrideAttrs (_: rec { version = "2.45.20"; });
   };
 }
