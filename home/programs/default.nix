@@ -1,5 +1,6 @@
 {
   imports = [
+    ./sops.nix
     ./git.nix
     ./firefox.nix
     ./starship.nix
