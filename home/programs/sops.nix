@@ -1,4 +1,4 @@
-{ inputs, config, sops, ... }:
+{ inputs, ... }:
 {
   imports = [
     inputs.sops-nix.homeManagerModules.sops
