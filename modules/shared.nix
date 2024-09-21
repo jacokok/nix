@@ -115,28 +115,22 @@
     gc = {
       automatic = true;
       dates = "weekly";
-      options = "--delete-older-than 7d";
+      options = "--delete-older-than 14d";
     };
     optimise.automatic = true;
   };
-
-  # system.autoUpgrade = {
-  #   enable = true;
-  #   flake = inputs.self.outPath;
-  #   flags = [
-  #     "--update-input"
-  #     "nixpkgs"
-  #     "-L" # print build logs
-  #   ];
-  #   dates = "02:00";
-  #   randomizedDelaySec = "45min";
-  # };
 
   system.autoUpgrade = {
     enable = true;
     allowReboot = false;
     dates = "02:30";
     flake = "github:jacokok/nix";
+    flags = [
+      "--verbose"
+      "--recreate-lock-file"
+      "--no-write-lock-file"
+    ];
+    #operation = "boot";
   };
 
   virtualisation = {
@@ -159,21 +153,6 @@
       NIXPKGS_ALLOW_UNFREE = "1";
     };
   };
-
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # system.activationScripts.script.text = ''
-  #   cp /home/doink/.face.png /var/lib/AccountsService/icons/doink
-  # '';
 
   system.stateVersion = "23.11";
 }
