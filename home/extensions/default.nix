@@ -4,7 +4,7 @@ let
   extensions = with pkgs.gnomeExtensions; [
     just-perfection
     caffeine
-    # tray-icons-reloaded
+    rounded-window-corners-reborn
   ];
 in
 {

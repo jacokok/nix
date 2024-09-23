@@ -5,6 +5,7 @@
     ./firefox.nix
     ./starship.nix
     ./neovim.nix
+    ./kitty.nix
     ./vscode
     ./zellij
   ];

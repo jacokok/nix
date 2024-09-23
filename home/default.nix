@@ -68,7 +68,8 @@
     bat = {
       enable = true;
       config = {
-        theme = "Visual Studio Dark+";
+        #theme = "Visual Studio Dark+";
+        theme = "Catppuccin Mocha";
         color = "always";
       };
     };
