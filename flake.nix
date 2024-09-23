@@ -34,6 +34,8 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
+    catppuccin.url = "github:catppuccin/nix";
+
     # Disko
     disko = {
       url = "github:nix-community/disko";
@@ -49,6 +51,7 @@
     , home-manager
     , sops-nix
     , nvim
+    , catppuccin
     , disko
     , ...
     } @ inputs:

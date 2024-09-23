@@ -6,6 +6,7 @@
     ./starship.nix
     ./neovim.nix
     ./kitty.nix
+    ./catppuccin.nix
     ./vscode
     ./zellij
   ];

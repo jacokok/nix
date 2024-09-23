@@ -14,11 +14,11 @@
 
   qt = {
     enable = true;
-    # platformTheme = {
-    #   name = "adwaita";
-    # };
-    # style = {
-    #   name = "adwaita-dark";
-    # };
+    platformTheme = {
+      name = "kvantum";
+    };
+    style = {
+      name = "kvantum";
+    };
   };
 }

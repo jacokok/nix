@@ -3,7 +3,8 @@
   programs = {
     kitty = {
       enable = true;
-      theme = "Catppuccin-Mocha";
+      catppuccin.enable = true;
+      #theme = "Catppuccin-Mocha";
       font = {
         name = "FiraCode Nerd Font";
         size = 14;
