@@ -4,7 +4,6 @@
     kitty = {
       enable = true;
       catppuccin.enable = true;
-      #theme = "Catppuccin-Mocha";
       font = {
         name = "FiraCode Nerd Font";
         size = 14;
@@ -18,8 +17,7 @@
         tab_bar_style = "powerline";
         tab_powerline_style = "round";
         copy_on_select = "clipboard";
-        #hide_window_decorations = "yes";
-        #tab_bar_edge = "top";
+        hide_window_decorations = "titlebar-and-corners";
         enabled_layouts = "horizontal,grid,splits,vertical";
         window_border_width = "1pt";
         cursor_shape = "block";
