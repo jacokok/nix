@@ -17,8 +17,10 @@ return {
   window_close_confirmation = 'NeverPrompt',
   font_size = 14,
   xcursor_theme = "Adwaita",
-  -- window_decorations = "NONE",
   window_decorations = "RESIZE",
   enable_wayland = true,
+  window_padding = {
+    bottom = 0,
+  },
 }
 
