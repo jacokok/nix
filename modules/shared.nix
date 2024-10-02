@@ -134,8 +134,9 @@
     homeBinInPath = true;
     localBinInPath = true;
     sessionVariables = {
-      TERMINAL = "ptyxis";
-      TERM = "ptyxis";
+      TERMINAL = "wezterm";
+      TERM = "wezterm";
+      EDITOR = "nvim";
       NIXOS_OZONE_WL = "1";
       NIXPKGS_ALLOW_UNFREE = "1";
     };

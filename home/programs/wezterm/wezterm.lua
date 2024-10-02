@@ -1,6 +1,4 @@
 local wezterm = require("wezterm")
--- local left_icon = wezterm.nerdfonts.ple_left_half_circle_thick
--- local right_icon = wezterm.nerdfonts.ple_left_half_circle_thick
 
 return {
   font = wezterm.font("FiraCode Nerd Font"),
@@ -18,6 +16,8 @@ return {
   font_size = 14,
   xcursor_theme = "Adwaita",
   window_decorations = "RESIZE",
+  initial_rows = 50,
+  initial_cols = 200,
   enable_wayland = true,
   window_padding = {
     top = 0,

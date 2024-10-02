@@ -3,7 +3,8 @@ let
   extensions = with pkgs.gnomeExtensions; [
     just-perfection
     caffeine
-    # rounded-window-corners-reborn
+    rounded-window-corners-reborn
+    blur-my-shell
   ];
 in
 {

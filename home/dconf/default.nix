@@ -41,9 +41,14 @@
       # use-system-font = false;
     };
 
+    # "org/gnome/Ptyxis/Profiles/5060802acb7f4ade47135c3466391f2b" = {
+    #   label = "Default";
+    #   palette = "Vs Code";
+    # };
+
     "org/gnome/Ptyxis/Profiles/5060802acb7f4ade47135c3466391f2b" = {
       label = "Default";
-      palette = "Vs Code";
+      palette = "Catppuccin Mocha";
     };
   };
 }
