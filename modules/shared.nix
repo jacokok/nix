@@ -1,6 +1,4 @@
-{ config, pkgs, outputs, inputs, ... }:
-
-{
+{ config, pkgs, outputs, inputs, ... }: {
   networking = {
     networkmanager.enable = true;
     # extraHosts =
@@ -73,10 +71,7 @@
   # Allow unfree packages
   nixpkgs = {
     config.allowUnfree = true;
-    overlays = [
-      outputs.overlays.additions
-      outputs.overlays.modifications
-    ];
+    overlays = [ outputs.overlays.additions outputs.overlays.modifications ];
   };
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -96,8 +91,8 @@
     interpreter = "${pkgs.appimage-run}/bin/appimage-run";
     recognitionType = "magic";
     offset = 0;
-    mask = ''\xff\xff\xff\xff\x00\x00\x00\x00\xff\xff\xff'';
-    magicOrExtension = ''\x7fELF....AI\x02'';
+    mask = "\\xff\\xff\\xff\\xff\\x00\\x00\\x00\\x00\\xff\\xff\\xff";
+    magicOrExtension = "\\x7fELF....AI\\x02";
   };
 
   # Enable automatic login for the user.
@@ -109,9 +104,7 @@
   systemd.services."autovt@tty1".enable = false;
 
   nix = {
-    settings = {
-      experimental-features = "nix-command flakes";
-    };
+    settings = { experimental-features = "nix-command flakes"; };
     gc = {
       automatic = true;
       dates = "weekly";
@@ -122,21 +115,15 @@
 
   system.autoUpgrade = {
     enable = true;
-    allowReboot = false;
+    allowReboot = true;
     dates = "02:30";
     flake = "github:jacokok/nix";
-    flags = [
-      "--verbose"
-      "--recreate-lock-file"
-      "--no-write-lock-file"
-    ];
+    flags = [ "--recreate-lock-file" "--no-write-lock-file" ];
     #operation = "boot";
   };
 
   virtualisation = {
-    podman = {
-      enable = true;
-    };
+    podman = { enable = true; };
     docker = {
       enable = true;
       storageDriver = "btrfs";

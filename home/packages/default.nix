@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{ pkgs, ... }: {
   home.packages = with pkgs; [
     wget
     ripgrep
@@ -33,5 +31,8 @@
     inkscape
     wl-clipboard
     nmap
+    lazygit
+    lazydocker
+    lazysql
   ];
 }
