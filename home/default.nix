@@ -1,24 +1,8 @@
-{ inputs
-, lib
-, config
-, pkgs
-, outputs
-, ...
-}: {
-  imports = [
-    ./programs
-    ./packages
-    ./extensions
-    ./dconf
-    ./theme
-    ./files
-  ];
+{ inputs, lib, config, pkgs, outputs, ... }: {
+  imports = [ ./programs ./packages ./extensions ./dconf ./theme ./files ];
 
   nixpkgs = {
-    overlays = [
-      outputs.overlays.additions
-      outputs.overlays.modifications
-    ];
+    overlays = [ outputs.overlays.additions outputs.overlays.modifications ];
     config = {
       allowUnfree = true;
       allowUnfreePredicate = _: true;
@@ -36,19 +20,12 @@
       vim = "nvim";
     };
 
-    sessionVariables = {
-      PNPM_HOME = "$HOME/.pnpm-global/bin";
-    };
+    sessionVariables = { PNPM_HOME = "$HOME/.pnpm-global/bin"; };
 
-    sessionPath = [
-      "$HOME/.dotnet/tools"
-      "$HOME/.pnpm-global/bin"
-    ];
+    sessionPath = [ "$HOME/.dotnet/tools" "$HOME/.pnpm-global/bin" ];
   };
 
-  home.file.".face" = {
-    source = ../assets/face.png;
-  };
+  home.file.".face" = { source = ../assets/face.png; };
 
   # home.file.".mozilla/firefox/doink/chrome".source = inputs.firefox-gnome-theme;
 
@@ -70,7 +47,7 @@
       catppuccin.enable = true;
       config = {
         #theme = "Visual Studio Dark+";
-      #  theme = "Catppuccin Mocha";
+        #  theme = "Catppuccin Mocha";
         color = "always";
       };
     };
@@ -79,9 +56,8 @@
       enable = true;
       catppuccin.enable = true;
       defaultCommand = "fd --type f";
-      fileWidgetOptions = [
-        "--preview 'bat --color=always --plain --line-range=:200 {}'"
-      ];
+      fileWidgetOptions =
+        [ "--preview 'bat --color=always --plain --line-range=:200 {}'" ];
       changeDirWidgetCommand = "fd --type d";
       changeDirWidgetOptions = [ "--preview 'tree -C {} | head -200'" ];
     };

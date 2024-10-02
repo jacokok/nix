@@ -1,12 +1,9 @@
-{ config, pkgs, inputs, outputs, vars, ... }:
-
-{
-  imports =
-    [
-      ./hardware-configuration.nix
-      ../../modules
-      inputs.home-manager.nixosModules.home-manager
-    ];
+{ config, pkgs, inputs, outputs, vars, ... }: {
+  imports = [
+    ./hardware-configuration.nix
+    ../../modules
+    inputs.home-manager.nixosModules.home-manager
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -16,16 +13,13 @@
   boot.initrd.kernelModules = [ "amdgpu" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
 
-  hardware.graphics = {
-    enable = true;
-  };
+  hardware.graphics = { enable = true; };
 
   networking.hostName = "doink-pc";
 
   home-manager = {
     extraSpecialArgs = { inherit inputs vars outputs; };
-    users = {
-      doink = import ../../home/hosts/doink-pc;
-    };
+    users = { doink = import ../../home/hosts/doink-pc; };
+    backupFileExtension = "hm-backup";
   };
 }
