@@ -116,10 +116,10 @@
   system.autoUpgrade = {
     enable = true;
     allowReboot = true;
-    dates = "02:30";
     flake = "github:jacokok/nix";
-    flags = [ "--recreate-lock-file" "--no-write-lock-file" ];
-    #operation = "boot";
+    dates = "02:30";
+    # flags = [ "--recreate-lock-file" "--no-write-lock-file" ];
+    # operation = "boot";
   };
 
   virtualisation = {
