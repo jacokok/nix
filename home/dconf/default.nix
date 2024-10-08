@@ -1,9 +1,9 @@
-{ lib, ... }: {
+{
   dconf.settings = {
     "org/gnome/shell" = {
       favorite-apps = [
         "firefox.desktop"
-        "org.gnome.Ptyxis.desktop"
+        "org.wezfurlong.wezterm.desktop"
         "org.gnome.Nautilus.desktop"
         "code.desktop"
       ];
@@ -20,6 +20,7 @@
     "org/gnome/mutter" = {
       dynamic-workspaces = true;
       edge-tiling = true;
+      workspaces-only-on-primary = true;
     };
 
     "org/gnome/desktop/peripherals/touchpad" = { tap-to-click = true; };
@@ -36,15 +37,7 @@
     "org/gnome/Ptyxis" = {
       default-profile-uuid = "5060802acb7f4ade47135c3466391f2b";
       profile-uuids = [ "5060802acb7f4ade47135c3466391f2b" ];
-      # restore-session = false;
-      # restore-window-size = false;
-      # use-system-font = false;
     };
-
-    # "org/gnome/Ptyxis/Profiles/5060802acb7f4ade47135c3466391f2b" = {
-    #   label = "Default";
-    #   palette = "Vs Code";
-    # };
 
     "org/gnome/Ptyxis/Profiles/5060802acb7f4ade47135c3466391f2b" = {
       label = "Default";
