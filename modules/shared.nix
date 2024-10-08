@@ -1,4 +1,4 @@
-{ config, pkgs, outputs, inputs, ... }: {
+{ config, outputs, pkgs, ... }: {
   networking = {
     networkmanager.enable = true;
     # extraHosts =
@@ -25,27 +25,29 @@
     LC_TIME = "en_ZA.UTF-8";
   };
 
-  # Configure keymap in X11
-  services.xserver = {
-    xkb = {
-      layout = "za";
-      variant = "";
+  services = {
+    # Configure keymap in X11
+    xserver = {
+      xkb = {
+        layout = "za";
+        variant = "";
+      };
     };
-  };
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
-  services.printing = {
-    listenAddresses = [ "*:631" ];
-    allowFrom = [ "all" ];
-    browsing = true;
-    defaultShared = true;
-    openFirewall = true;
+    # Enable CUPS to print documents.
+    printing.enable = true;
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
+    printing = {
+      listenAddresses = [ "*:631" ];
+      allowFrom = [ "all" ];
+      browsing = true;
+      defaultShared = true;
+      openFirewall = true;
+    };
   };
 
   hardware.pulseaudio.enable = false;
@@ -116,10 +118,14 @@
   system.autoUpgrade = {
     enable = true;
     allowReboot = true;
-    flake = "github:jacokok/nix";
+    flake = "github:jacokok/nix#${config.networking.hostName}";
     dates = "02:30";
-    # flags = [ "--recreate-lock-file" "--no-write-lock-file" ];
-    # operation = "boot";
+    flags = [ "--refresh" "-L" ];
+    randomizedDelaySec = "5min";
+    rebootWindow = {
+      lower = "02:00";
+      upper = "06:00";
+    };
   };
 
   virtualisation = {
