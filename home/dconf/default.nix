@@ -2,7 +2,7 @@
   dconf.settings = {
     "org/gnome/shell" = {
       favorite-apps = [
-        "io.github.zen_browser.zen.desktop"
+        "firefox.desktop"
         "org.wezfurlong.wezterm.desktop"
         "org.gnome.Nautilus.desktop"
         "code.desktop"
