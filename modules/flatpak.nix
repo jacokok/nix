@@ -1,5 +1,3 @@
-{ ... }:
-
 {
   services.flatpak = {
     enable = true;
@@ -32,6 +30,7 @@
       "tv.kodi.Kodi"
       "com.redis.RedisInsight"
       "org.raspberrypi.rpi-imager"
+      "io.github.zen_browser.zen"
     ];
   };
 }
