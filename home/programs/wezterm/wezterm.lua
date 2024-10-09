@@ -3,6 +3,17 @@ local wezterm = require("wezterm")
 local ROUNDED_LEFT_CIRCLE = " "
 local ROUNDED_RIGHT_CIRCLE = ""
 
+local function tab_title(tab_info)
+  local title = tab_info.tab_title
+  -- if the tab title is explicitly set, take that
+  if title and #title > 0 then
+    return title
+  end
+  -- Otherwise, use the title from the active pane
+  -- in that tab
+  return tab_info.active_pane.title
+end
+
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
   local edge_background = "#1e1e2e"
   local background = "#1e1e2e"
@@ -18,7 +29,9 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 
   local edge_foreground = background
 
-  local title = tab.tab_index .. ": " .. wezterm.truncate_right(tab.active_pane.title, max_width - 4)
+  -- local title = tab.tab_index .. ": " .. wezterm.truncate_right(tab.active_pane.title, max_width - 4)
+  local title = tab_title(tab)
+  title = wezterm.truncate_right(title, max_width - 2)
 
   return {
     { Background = { Color = edge_background } },
