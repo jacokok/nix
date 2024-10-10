@@ -46,3 +46,9 @@ nix shell nixpkgs#age -c age-keygen -y ~/.config/sops/age/keys.txt
 ```bash
 nix run "github:nix-community/nix4vscode" -- home/programs/vscode/config.toml -o home/programs/vscode/vscode_plugins.nix
 ```
+
+## Font Fix
+
+ln -s /run/current-system/sw/share/X11/fonts ~/.local/share/fonts
+flatpak --user override --filesystem=$HOME/.local/share/fonts:ro
+flatpak --user override --filesystem=$HOME/.icons:ro

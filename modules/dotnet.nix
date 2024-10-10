@@ -1,16 +1,13 @@
-{ config, lib, pkgs, ... }:
-
-{
+{ pkgs, ... }: {
   environment =
     let
-      dotnet-combined = (with pkgs.dotnetCorePackages; combinePackages [
-        sdk_6_0
-        sdk_8_0
-      ]).overrideAttrs (finalAttrs: previousAttrs: {
-        # This is needed to install workload in $HOME
-        # https://discourse.nixos.org/t/dotnet-maui-workload/20370/2
+      dotnet-combined = (with pkgs.dotnetCorePackages;
+        combinePackages [ sdk_6_0 sdk_8_0 ]).overrideAttrs
+        (finalAttrs: previousAttrs: {
+          # This is needed to install workload in $HOME
+          # https://discourse.nixos.org/t/dotnet-maui-workload/20370/2
 
-        postBuild = (previousAttrs.postBuild or '''') + ''
+          postBuild = (previousAttrs.postBuild or "") + ''
 
           for i in $out/sdk/*
           do
@@ -22,15 +19,10 @@
             touch $out/metadata/workloads/''${i/-*}/userlocal
           done
         '';
-      });
+        });
     in
     {
-      sessionVariables = {
-        DOTNET_ROOT = "${dotnet-combined}";
-      };
-      systemPackages =
-        with pkgs; [
-          dotnet-combined
-        ];
+      sessionVariables = { DOTNET_ROOT = "${dotnet-combined}"; };
+      systemPackages = with pkgs; [ dotnet-combined ];
     };
 }

@@ -1,24 +1,14 @@
-{ pkgs, ... }:
-
 {
   gtk = {
     enable = true;
-    theme = {
-      name = "adw-gtk3-dark";
-    };
+    theme = { name = "adw-gtk3-dark"; };
 
-    iconTheme = {
-      name = "MoreWaita";
-    };
+    iconTheme = { name = "MoreWaita"; };
   };
 
   qt = {
     enable = true;
-    platformTheme = {
-      name = "kvantum";
-    };
-    style = {
-      name = "kvantum";
-    };
+    platformTheme = { name = "kvantum"; };
+    style = { name = "kvantum"; };
   };
 }

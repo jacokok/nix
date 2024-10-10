@@ -1,7 +1,4 @@
-{ stdenv
-, fetchFromGitHub
-,
-}:
+{ stdenv, fetchFromGitHub, }:
 stdenv.mkDerivation rec {
   pname = "segoe-ui";
   version = "master-2024-04-16";
