@@ -117,10 +117,11 @@
 
   system.autoUpgrade = {
     enable = true;
+    operation = "switch";
     allowReboot = true;
     flake = "github:jacokok/nix#${config.networking.hostName}";
     dates = "02:30";
-    flags = [ "--refresh" "-L" ];
+    flags = [ "--no-update-lock-file" "--no-write-lock-file" ];
     randomizedDelaySec = "5min";
     rebootWindow = {
       lower = "02:00";
