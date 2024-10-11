@@ -9,5 +9,6 @@
     ./wezterm
     ./catppuccin.nix
     ./vscode
+    ./helix.nix
   ];
 }
