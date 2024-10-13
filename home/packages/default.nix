@@ -34,5 +34,6 @@
     lazygit
     lazydocker
     lazysql
+    unzip
   ];
 }
