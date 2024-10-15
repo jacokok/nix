@@ -1,6 +1,4 @@
-{ inputs, vars, pkgs, ... }:
-{
-  home.packages = with pkgs; [
-    nvim
-  ];
+{ inputs, pkgs, ... }: {
+  home.packages = with pkgs; [ neovim ];
+  home.file = { ".config/nvim/".source = "${inputs.dotfiles}/nvim/"; };
 }

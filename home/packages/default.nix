@@ -35,5 +35,10 @@
     lazydocker
     lazysql
     unzip
+    yazi
+    cargo
+    rustc
+    go
+    nixfmt
   ];
 }

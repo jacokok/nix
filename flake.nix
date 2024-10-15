@@ -17,15 +17,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nvim = {
-      url = "github:jacokok/nvim";
-      inputs.nixpkgs.follows = "nixpkgs";
+    dotfiles = {
+      url = "github:jacokok/dotfiles";
+      flake = false;
     };
-
-    # nix-vscode-extensions = {
-    #   url = "github:nix-community/nix-vscode-extensions";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
 
     firefox-gnome-theme = {
       url = "github:rafaelmardojai/firefox-gnome-theme";
@@ -43,32 +38,18 @@
     };
   };
 
-  outputs =
-    { self
-    , nixpkgs
-    , nix-flatpak
-    , nixos-hardware
-    , home-manager
-    , sops-nix
-    , nvim
-    , catppuccin
-    , disko
-    , ...
-    } @ inputs:
+  outputs = { self, nixpkgs, nix-flatpak, nixos-hardware, home-manager, sops-nix
+    , dotfiles, catppuccin, disko, ... }@inputs:
     let
       inherit (self) outputs;
       vars = {
         user = "doink";
         system = "x86_64-linux";
       };
-    in
-    {
+    in {
       overlays = import ./overlays { inherit inputs outputs; };
 
-      nixosConfigurations = (
-        import ./hosts {
-          inherit inputs outputs nixpkgs vars;
-        }
-      );
+      nixosConfigurations =
+        (import ./hosts { inherit inputs outputs nixpkgs vars; });
     };
 }
