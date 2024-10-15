@@ -1,7 +1,5 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    (callPackage ../../packages/blender.nix { })
-  ];
+  home.packages = with pkgs; [ blender ];
 }

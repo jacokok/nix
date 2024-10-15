@@ -1,5 +1,5 @@
-{ inputs, lib, config, pkgs, outputs, ... }: {
-  imports = [ ./programs ./packages ./extensions ./dconf ./theme ./files ];
+{ pkgs, outputs, ... }: {
+  imports = [ ./programs ./extensions ./dconf ./theme ./files ];
 
   nixpkgs = {
     overlays = [ outputs.overlays.additions outputs.overlays.modifications ];
