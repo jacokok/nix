@@ -14,6 +14,7 @@
       inter
       (nerdfonts.override { fonts = [ "FiraCode" ]; })
       (callPackage ./segoe-ui.nix { })
+      (callPackage ./custom.nix { })
     ];
   };
 }
