@@ -51,6 +51,6 @@
     cargo
     rustc
     go
-    nixfmt
+    nixfmt-rfc-style
   ];
 }
