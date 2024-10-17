@@ -10,7 +10,14 @@
         signByDefault = true;
       };
       extraConfig = {
+        init.defaultBranch = "main";
+        pull.rebase = true;
         core.editor = "nvim";
+
+        rebase = {
+          autostash = true;
+          autosquash = true;
+        };
       };
     };
   };
