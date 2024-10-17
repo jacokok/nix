@@ -52,5 +52,6 @@
     rustc
     go
     nixfmt-rfc-style
+    libnotify
   ];
 }
