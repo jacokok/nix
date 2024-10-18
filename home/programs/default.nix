@@ -53,5 +53,6 @@
     go
     nixfmt-rfc-style
     libnotify
+    azuredatastudio
   ];
 }
