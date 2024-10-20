@@ -54,5 +54,6 @@
     nixfmt-rfc-style
     libnotify
     azuredatastudio
+    roslyn-ls
   ];
 }
