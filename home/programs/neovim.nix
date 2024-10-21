@@ -1,4 +1,10 @@
-{ inputs, pkgs, ... }: {
+{ inputs, pkgs, ... }:
+{
   home.packages = with pkgs; [ neovim ];
-  home.file = { ".config/nvim/".source = "${inputs.dotfiles}/nvim/"; };
+  home.file = {
+    ".config/nvim/" = {
+      source = "${inputs.dotfiles}/nvim/";
+      recursive = true;
+    };
+  };
 }

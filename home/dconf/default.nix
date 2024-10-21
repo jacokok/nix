@@ -23,7 +23,9 @@
       workspaces-only-on-primary = true;
     };
 
-    "org/gnome/desktop/peripherals/touchpad" = { tap-to-click = true; };
+    "org/gnome/desktop/peripherals/touchpad" = {
+      tap-to-click = true;
+    };
 
     "org/gnome/shell/extensions/just-perfection" = {
       accessibility-menu = false;
