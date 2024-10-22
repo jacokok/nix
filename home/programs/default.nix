@@ -55,5 +55,7 @@
     libnotify
     azuredatastudio
     roslyn-ls
+    gh
+    yq
   ];
 }
