@@ -1,5 +1,8 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ blender-hip aseprite ];
+  home.packages = with pkgs; [
+    # blender-hip 
+    aseprite
+  ];
 }
