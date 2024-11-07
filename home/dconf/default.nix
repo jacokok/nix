@@ -21,6 +21,11 @@
       dynamic-workspaces = true;
       edge-tiling = true;
       workspaces-only-on-primary = true;
+      experimental-features = [
+        "scale-monitor-framebuffer"
+        "xwayland-native-scaling"
+        "variable-refresh-rate"
+      ];
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
@@ -29,6 +34,7 @@
 
     "org/gnome/shell/extensions/just-perfection" = {
       accessibility-menu = false;
+      workspace-switcher-size = 15;
     };
 
     "org/gnome/desktop/background" = {
