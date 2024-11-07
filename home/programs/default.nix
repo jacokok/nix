@@ -57,6 +57,6 @@
     roslyn-ls
     gh
     yq
-    jetbrains.rider
+    # jetbrains.rider
   ];
 }
