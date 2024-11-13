@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    # blender-hip 
+    blender-hip
     aseprite
   ];
 }
