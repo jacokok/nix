@@ -37,6 +37,11 @@
       workspace-switcher-size = 15;
     };
 
+    "org/gnome/destop/peripherals/keyboard" = {
+      delay = 200;
+      repeat-interval = 20;
+    };
+
     "org/gnome/desktop/background" = {
       picture-uri = "${../../assets/wallpaper.png}";
       picture-uri-dark = "${../../assets/wallpaper.png}";
