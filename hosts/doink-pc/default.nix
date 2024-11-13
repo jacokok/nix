@@ -1,4 +1,11 @@
-{ config, pkgs, inputs, outputs, vars, ... }: {
+{
+  pkgs,
+  inputs,
+  outputs,
+  vars,
+  ...
+}:
+{
   imports = [
     ./hardware-configuration.nix
     ../../modules
@@ -13,13 +20,19 @@
   boot.initrd.kernelModules = [ "amdgpu" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
 
-  hardware.graphics = { enable = true; };
+  hardware.graphics = {
+    enable = true;
+  };
 
   networking.hostName = "doink-pc";
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs vars outputs; };
-    users = { doink = import ../../home/hosts/doink-pc; };
+    extraSpecialArgs = {
+      inherit inputs vars outputs;
+    };
+    users = {
+      doink = import ../../home/hosts/doink-pc;
+    };
     backupFileExtension = "hm-backup";
   };
 }
