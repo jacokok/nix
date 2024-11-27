@@ -37,6 +37,9 @@
       sessionVariables = {
         DOTNET_ROOT = "${dotnet-combined}";
       };
-      systemPackages = with pkgs; [ dotnet-combined ];
+      systemPackages = with pkgs; [
+        dotnet-combined
+        dotnet-outdated
+      ];
     };
 }
