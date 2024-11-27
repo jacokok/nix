@@ -2,11 +2,11 @@
   "nodes": {
     "catppuccin": {
       "locked": {
-        "lastModified": 1731232837,
-        "narHash": "sha256-0aIwr/RC/oe7rYkfJb47xjdEQDSNcqpFGsEa+EPlDEs=",
+        "lastModified": 1732703064,
+        "narHash": "sha256-n8XOmn0WGtQhAMJKTnhL/3ttV2ZahPRf6gtlqZ6R4QE=",
         "owner": "catppuccin",
         "repo": "nix",
-        "rev": "32359bf226fe874d3b7a0a5753d291a4da9616fe",
+        "rev": "2e2bdecf0bae287d74947cd5cf967c5c499c23c1",
         "type": "github"
       },
       "original": {
@@ -54,11 +54,11 @@
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
-        "lastModified": 1732670982,
-        "narHash": "sha256-EF4Gf9Pkd+4XNwt5aNRKXIOyZ/MDSQV0P903VG4gf9w=",
+        "lastModified": 1732711723,
+        "narHash": "sha256-g9YG5xRj67gqsFn5grRQe3bPjp2LKucxoAB+HtxzCK0=",
         "owner": "rafaelmardojai",
         "repo": "firefox-gnome-theme",
-        "rev": "bce650b80c6651ec110a8da928466f8483b7d62f",
+        "rev": "442d52506aba0ec1e59834e6c77d4a27f46cb2d5",
         "type": "github"
       },
       "original": {
