@@ -38,11 +38,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1732612166,
-        "narHash": "sha256-2/wJ37mKBMoeXlaBEq8QvKf2euz/JkahtAn4hxwpfZs=",
+        "lastModified": 1732790223,
+        "narHash": "sha256-OV76GvVlCqOb2rRZrzfs3LMhpfiEdKP+XVi7WQ54FmM=",
         "owner": "jacokok",
         "repo": "dotfiles",
-        "rev": "699014c32c997cdd3dabb9197b3238d65b54078b",
+        "rev": "1a6b589c1e3abf0220307c36f919179c2fe5fc54",
         "type": "github"
       },
       "original": {
@@ -54,11 +54,11 @@
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
-        "lastModified": 1732711830,
-        "narHash": "sha256-g9YG5xRj67gqsFn5grRQe3bPjp2LKucxoAB+HtxzCK0=",
+        "lastModified": 1732798115,
+        "narHash": "sha256-9tuznhocM8SrzLcK7/1AAf4K33M+hvfPO0zYlrW+FOQ=",
         "owner": "rafaelmardojai",
         "repo": "firefox-gnome-theme",
-        "rev": "83d2775a9dd28669fdbe798b9ceb97715d0341c0",
+        "rev": "a2bc01569c184e8149c82a30e25dd61f5296ce68",
         "type": "github"
       },
       "original": {
@@ -74,11 +74,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1732482255,
-        "narHash": "sha256-GUffLwzawz5WRVfWaWCg78n/HrBJrOG7QadFY6rtV8A=",
+        "lastModified": 1732793095,
+        "narHash": "sha256-6TrknJ8CpvSSF4gviQSeD+wyj3siRcMvdBKhOXkEMKU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "a9953635d7f34e7358d5189751110f87e3ac17da",
+        "rev": "2f7739d01080feb4549524e8f6927669b61c6ee3",
         "type": "github"
       },
       "original": {
