@@ -3,9 +3,7 @@
   programs = {
     nix-ld = {
       enable = true;
-      package = pkgs.nix-ld-rs;
-
-      # libraries = [
+      # libraries = with pkgs; [
       #   stdenv.cc.cc
       #   stdenv.cc.cc.lib
       #   curl
