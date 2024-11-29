@@ -58,5 +58,12 @@
     gh
     yq
     # jetbrains.rider
+
+    # DEV
+    # svelte-language-server
+    # nodePackages.jsonlint
+    # bash
+    # shfmt
+    # bash-language-server
   ];
 }
