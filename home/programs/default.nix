@@ -54,12 +54,12 @@
     nixfmt-rfc-style
     libnotify
     azuredatastudio
-    roslyn-ls
     gh
     yq
     # jetbrains.rider
 
     # DEV
+    # roslyn-ls
     # svelte-language-server
     # nodePackages.jsonlint
     # bash

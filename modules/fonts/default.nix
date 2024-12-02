@@ -12,7 +12,8 @@
       fira-code
       roboto
       inter
-      (nerdfonts.override { fonts = [ "FiraCode" ]; })
+      nerd-fonts.fira-code
+      # (nerdfonts.override { fonts = [ "FiraCode" ]; })
       (callPackage ./segoe-ui.nix { })
       (callPackage ./custom.nix { })
     ];
