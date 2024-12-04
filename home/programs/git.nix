@@ -5,6 +5,18 @@
       enable = true;
       userName = "Jaco Kok";
       userEmail = "kokjaco2@gmail.com";
+      delta = {
+        enable = true;
+        options = {
+          line-numbers = true;
+          side-by-side = true;
+          navigate = true;
+          # catppuccin = {
+          #   enable = true;
+          #   flavor = "mocha";
+          # };
+        };
+      };
       signing = {
         key = "7ABD453C60720B82";
         signByDefault = true;

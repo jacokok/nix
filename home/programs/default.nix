@@ -57,6 +57,7 @@
     gh
     yq
     # jetbrains.rider
+    freecad
 
     # DEV
     # roslyn-ls
