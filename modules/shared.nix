@@ -1,4 +1,10 @@
-{ config, outputs, pkgs, ... }: {
+{
+  config,
+  outputs,
+  pkgs,
+  ...
+}:
+{
   networking = {
     networkmanager.enable = true;
     # extraHosts =
@@ -73,7 +79,10 @@
   # Allow unfree packages
   nixpkgs = {
     config.allowUnfree = true;
-    overlays = [ outputs.overlays.additions outputs.overlays.modifications ];
+    overlays = [
+      outputs.overlays.additions
+      outputs.overlays.modifications
+    ];
   };
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -106,7 +115,9 @@
   systemd.services."autovt@tty1".enable = false;
 
   nix = {
-    settings = { experimental-features = "nix-command flakes"; };
+    settings = {
+      experimental-features = "nix-command flakes";
+    };
     gc = {
       automatic = true;
       dates = "weekly";
@@ -121,7 +132,10 @@
     allowReboot = true;
     flake = "github:jacokok/nix#${config.networking.hostName}";
     dates = "02:30";
-    flags = [ "--no-update-lock-file" "--no-write-lock-file" ];
+    flags = [
+      "--no-update-lock-file"
+      "--no-write-lock-file"
+    ];
     randomizedDelaySec = "5min";
     rebootWindow = {
       lower = "02:00";
@@ -130,10 +144,13 @@
   };
 
   virtualisation = {
-    podman = { enable = true; };
+    podman = {
+      enable = true;
+    };
     docker = {
       enable = true;
       storageDriver = "btrfs";
+      liveRestore = false;
     };
   };
 
