@@ -38,16 +38,38 @@
     };
   };
 
-  outputs = { self, nixpkgs, nix-flatpak, nixos-hardware, home-manager, sops-nix
-    , dotfiles, catppuccin, disko, ... }@inputs:
+  outputs =
+    { self
+    , nixpkgs
+    , nix-flatpak
+    , nixos-hardware
+    , home-manager
+    , sops-nix
+    , dotfiles
+    , catppuccin
+    , disko
+    , ...
+    }@inputs:
     let
       inherit (self) outputs;
       vars = {
         user = "doink";
         system = "x86_64-linux";
       };
-    in {
-      overlays = import ./overlays { inherit inputs outputs; };
+      systems = [
+        "aarch64-linux"
+        "i686-linux"
+        "x86_64-linux"
+        "aarch64-darwin"
+        "x86_64-darwin"
+      ];
+      forAllSystems = nixpkgs.lib.genAttrs systems;
+    in
+    {
+      packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+      overlays = import ./overlays {
+        inherit inputs outputs;
+      };
 
       nixosConfigurations =
         (import ./hosts { inherit inputs outputs nixpkgs vars; });

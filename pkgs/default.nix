@@ -3,5 +3,5 @@
 pkgs: {
   # example = pkgs.callPackage ./example { };
   # adwaita-for-steam = pkgs.callPackage ./adwaita-for-steam { };
-  # vscode-extensions.ms-dotnettools.csharp = pkgs.callPackage ./csharp.nix { };
+  vscode-extensions.ms-dotnettools.csharp = pkgs.callPackage ./csharp { };
 }
