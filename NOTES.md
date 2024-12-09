@@ -52,3 +52,9 @@ nix run "github:nix-community/nix4vscode" -- home/programs/vscode/config.toml -o
 ln -s /run/current-system/sw/share/X11/fonts ~/.local/share/fonts
 flatpak --user override --filesystem=$HOME/.local/share/fonts:ro
 flatpak --user override --filesystem=$HOME/.icons:ro
+
+## Build Custom Packages
+
+```bash
+nix build .#vscode-extensions.ms-dotnettools.csharp
+```
