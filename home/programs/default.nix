@@ -10,7 +10,6 @@
     ./catppuccin.nix
     ./vscode
     ./helix.nix
-    ./atuin.nix
   ];
   home.packages = with pkgs; [
     wget
