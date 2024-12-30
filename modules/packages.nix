@@ -6,5 +6,6 @@
     adw-gtk3
     sops
     gcc
+    ghostty
   ];
 }
