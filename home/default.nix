@@ -64,7 +64,6 @@
     };
     bat = {
       enable = true;
-      catppuccin.enable = true;
       config = {
         #theme = "Visual Studio Dark+";
         #  theme = "Catppuccin Mocha";
@@ -74,7 +73,6 @@
     zoxide.enable = true;
     fzf = {
       enable = true;
-      catppuccin.enable = true;
       defaultCommand = "fd --type f";
       fileWidgetOptions = [ "--preview 'bat --color=always --plain --line-range=:200 {}'" ];
       changeDirWidgetCommand = "fd --type d";
