@@ -3,7 +3,7 @@
     "org/gnome/shell" = {
       favorite-apps = [
         "firefox.desktop"
-        "org.wezfurlong.wezterm.desktop"
+        "com.mitchellh.ghostty.desktop"
         "org.gnome.Nautilus.desktop"
         "code.desktop"
       ];

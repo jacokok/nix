@@ -158,8 +158,11 @@
     homeBinInPath = true;
     localBinInPath = true;
     sessionVariables = {
-      TERMINAL = "wezterm";
+      # TERMINAL = "wezterm";
+      # TERM = "wezterm";
+      BROWSER = "firefox";
       TERM = "wezterm";
+      TERMINAL = "ghostty";
       EDITOR = "nvim";
       NIXOS_OZONE_WL = "1";
       NIXPKGS_ALLOW_UNFREE = "1";
