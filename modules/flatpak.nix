@@ -31,6 +31,7 @@
       "com.redis.RedisInsight"
       "org.raspberrypi.rpi-imager"
       "io.github.zen_browser.zen"
+      "com.heroicgameslauncher.hgl"
     ];
   };
 }
