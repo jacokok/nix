@@ -59,13 +59,6 @@
     yq
     # jetbrains.rider
     freecad
-
-    # DEV
-    # roslyn-ls
-    # svelte-language-server
-    # nodePackages.jsonlint
-    # bash
-    # shfmt
-    # bash-language-server
+    mqttui
   ];
 }
