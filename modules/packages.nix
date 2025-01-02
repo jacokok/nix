@@ -7,5 +7,6 @@
     sops
     gcc
     ghostty
+    usbutils
   ];
 }
