@@ -7,6 +7,7 @@
     ./starship.nix
     ./neovim.nix
     ./wezterm
+    ./ghostty
     ./catppuccin.nix
     ./vscode
     ./helix.nix
