@@ -61,5 +61,6 @@
     # jetbrains.rider
     freecad
     mqttui
+    fritzing
   ];
 }
