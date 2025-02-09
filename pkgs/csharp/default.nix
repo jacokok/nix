@@ -1,11 +1,11 @@
-{ lib
-, vscode-utils
-, patchelf
-, icu
-, stdenv
-, openssl
-, coreutils
-,
+{
+  lib,
+  vscode-utils,
+  patchelf,
+  icu,
+  stdenv,
+  openssl,
+  coreutils,
 }:
 let
   inherit (stdenv.hostPlatform) system;
@@ -26,37 +26,38 @@ let
         ".debugger/x86_64/vsdbg"
       ];
     in
-      {
-        x86_64-linux = {
-          arch = "linux-x64";
-          hash = "sha256-3RQk5VNrI2sSUBCBfRTEsxjLqZkpoTELt/v+CIp94QU=";
-          binaries = linuxBins;
-        };
-        aarch64-linux = {
-          arch = "linux-arm64";
-          hash = "sha256-p8VbpeLtGDO3TKpjY9EuqDVyCDvZaQe9+KeAMTMulDc=";
-          binaries = linuxBins;
-        };
-        x86_64-darwin = {
-          arch = "darwin-x64";
-          hash = "sha256-r85BNsxIXuQD20kjgqBvCLzTof4ExYDfbKG0zHaR86o=";
-          binaries = darwinBins;
-        };
-        aarch64-darwin = {
-          arch = "darwin-arm64";
-          hash = "sha256-p56EkUDxsukTx0FCCE2OrUBk3t2zj/kU6cdUVqdpfb8=";
-          binaries = darwinBins ++ [
-            ".debugger/arm64/vsdbg-ui"
-            ".debugger/arm64/vsdbg"
-          ];
-        };
-      }.${system} or (throw "Unsupported system: ${system}");
+    {
+      x86_64-linux = {
+        arch = "linux-x64";
+        hash = "sha256-laI6zoydOKAkRHZvHXQ6eFEJoFrb2I2Fe6gvti3eoJg=";
+        binaries = linuxBins;
+      };
+      aarch64-linux = {
+        arch = "linux-arm64";
+        hash = "sha256-p8VbpeLtGDO3TKpjY9EuqDVyCDvZaQe9+KeAMTMulDc=";
+        binaries = linuxBins;
+      };
+      x86_64-darwin = {
+        arch = "darwin-x64";
+        hash = "sha256-r85BNsxIXuQD20kjgqBvCLzTof4ExYDfbKG0zHaR86o=";
+        binaries = darwinBins;
+      };
+      aarch64-darwin = {
+        arch = "darwin-arm64";
+        hash = "sha256-p56EkUDxsukTx0FCCE2OrUBk3t2zj/kU6cdUVqdpfb8=";
+        binaries = darwinBins ++ [
+          ".debugger/arm64/vsdbg-ui"
+          ".debugger/arm64/vsdbg"
+        ];
+      };
+    }
+    .${system} or (throw "Unsupported system: ${system}");
 in
 buildVscodeMarketplaceExtension {
   mktplcRef = {
     name = "csharp";
     publisher = "ms-dotnettools";
-    version = "2.55.29";
+    version = "2.63.32";
     inherit (extInfo) hash arch;
   };
 
@@ -94,19 +95,15 @@ buildVscodeMarketplaceExtension {
 
     ''
     + (lib.concatStringsSep "\n" (
-      map
-        (bin: ''
-          chmod +x "${bin}"
-        '')
-        extInfo.binaries
+      map (bin: ''
+        chmod +x "${bin}"
+      '') extInfo.binaries
     ))
     + lib.optionalString stdenv.hostPlatform.isLinux (
       lib.concatStringsSep "\n" (
-        map
-          (bin: ''
-            patchelf_common "${bin}"
-          '')
-          extInfo.binaries
+        map (bin: ''
+          patchelf_common "${bin}"
+        '') extInfo.binaries
       )
     );
 
