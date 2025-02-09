@@ -21,8 +21,6 @@
     curl
     # firefox
     gnome-tweaks
-    ptyxis
-    # (callPackage ./ptyxis.nix { })
     nixpkgs-fmt
     bottom
     distrobox

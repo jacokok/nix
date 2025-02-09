@@ -46,15 +46,5 @@
       picture-uri = "${../../assets/wallpaper.png}";
       picture-uri-dark = "${../../assets/wallpaper.png}";
     };
-
-    "org/gnome/Ptyxis" = {
-      default-profile-uuid = "5060802acb7f4ade47135c3466391f2b";
-      profile-uuids = [ "5060802acb7f4ade47135c3466391f2b" ];
-    };
-
-    "org/gnome/Ptyxis/Profiles/5060802acb7f4ade47135c3466391f2b" = {
-      label = "Default";
-      palette = "Catppuccin Mocha";
-    };
   };
 }
