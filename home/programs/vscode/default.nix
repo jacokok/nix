@@ -5,9 +5,12 @@
       enable = true;
       package = pkgs.vscode;
       mutableExtensionsDir = true;
-      extensions = (with pkgs.vscode-extensions; [
-        ms-dotnettools.csharp
-      ]);
+      extensions = (
+        with pkgs.vscode-extensions;
+        [
+          ms-dotnettools.csharp
+        ]
+      );
 
       # extensions = (with (pkgs.forVSCodeVersion pkgs.vscode.version).vscode-marketplace; [
       #   # ms-dotnettools.csdevkit
