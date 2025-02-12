@@ -39,16 +39,17 @@
   };
 
   outputs =
-    { self
-    , nixpkgs
-    , nix-flatpak
-    , nixos-hardware
-    , home-manager
-    , sops-nix
-    , dotfiles
-    , catppuccin
-    , disko
-    , ...
+    {
+      self,
+      nixpkgs,
+      nix-flatpak,
+      nixos-hardware,
+      home-manager,
+      sops-nix,
+      dotfiles,
+      catppuccin,
+      disko,
+      ...
     }@inputs:
     let
       inherit (self) outputs;
@@ -71,7 +72,18 @@
         inherit inputs outputs;
       };
 
-      nixosConfigurations =
-        (import ./hosts { inherit inputs outputs nixpkgs vars; });
+      # TODO: Remove modules
+      # nixosModules = import ./modules;
+
+      nixosConfigurations = {
+        doink-pc = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [ ./nixos/doink-pc/configuration.nix ];
+        };
+        doink-laptop = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [ ./nixos/doink-laptop/configuration.nix ];
+        };
+      };
     };
 }
