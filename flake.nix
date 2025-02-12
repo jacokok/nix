@@ -85,5 +85,16 @@
           modules = [ ./nixos/doink-laptop/configuration.nix ];
         };
       };
+
+      # Available through 'home-manager --flake .#doink@doink-pc'
+      homeConfigurations = {
+        "doink@doinkpc" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [
+            ./home-manager/home.nix
+          ];
+        };
+      };
     };
 }

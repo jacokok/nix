@@ -8,4 +8,6 @@
     gcc
     usbutils
   ];
+
+  services.tailscale.enable = true;
 }
