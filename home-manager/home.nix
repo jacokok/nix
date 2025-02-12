@@ -86,6 +86,11 @@
     pinentryPackage = pkgs.pinentry-curses;
   };
 
+  services.home-manager.autoUpgrade = {
+    enable = true;
+    frequency = "daily";
+  };
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 

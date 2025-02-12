@@ -11,7 +11,6 @@
     ./dotnet.nix
     ./flatpak.nix
     ./fonts
-    # ./ld.nix
-    # ./libvirt.nix
+    ./libvirt.nix
   ];
 }
