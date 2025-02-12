@@ -46,5 +46,10 @@
       picture-uri = "${../../assets/wallpaper.png}";
       picture-uri-dark = "${../../assets/wallpaper.png}";
     };
+
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = [ "qemu:///system" ];
+      uris = [ "qemu:///system" ];
+    };
   };
 }

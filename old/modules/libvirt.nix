@@ -1,4 +1,4 @@
-{ pkgs, vars, ... }:
+{ pkgs, ... }:
 {
   virtualisation = {
     libvirtd = {
@@ -13,8 +13,6 @@
     spiceUSBRedirection.enable = true;
   };
 
-  users.users.${vars.user}.extraGroups = [ "libvirtd" ];
-
   environment.systemPackages = with pkgs; [
     spice
     spice-gtk
@@ -23,15 +21,6 @@
     #virtio-win
     #win-spice
   ];
-  programs.virt-manager.enable = true;
 
-  # TODO: Move this to home manager side
-  home-manager.users.${vars.user} = {
-    dconf.settings = {
-      "org/virt-manager/virt-manager/connections" = {
-        autoconnect = [ "qemu:///system" ];
-        uris = [ "qemu:///system" ];
-      };
-    };
-  };
+  programs.virt-manager.enable = true;
 }

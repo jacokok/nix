@@ -53,10 +53,6 @@
     }@inputs:
     let
       inherit (self) outputs;
-      vars = {
-        user = "doink";
-        system = "x86_64-linux";
-      };
       systems = [
         "aarch64-linux"
         "i686-linux"

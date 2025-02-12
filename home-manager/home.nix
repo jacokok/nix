@@ -1,12 +1,12 @@
 { pkgs, outputs, ... }:
 {
-  # imports = [
-  #   ./programs
-  #   ./extensions
-  #   ./dconf
-  #   ./theme
-  #   ./files
-  # ];
+  imports = [
+    ./programs
+    ./extensions
+    ./dconf
+    ./theme
+    ./files
+  ];
 
   nixpkgs = {
     overlays = [

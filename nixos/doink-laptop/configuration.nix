@@ -2,7 +2,6 @@
   pkgs,
   inputs,
   outputs,
-  vars,
   ...
 }:
 
@@ -22,7 +21,7 @@
 
   home-manager = {
     extraSpecialArgs = {
-      inherit inputs vars outputs;
+      inherit inputs outputs;
     };
     users = {
       doink = import ../../home/hosts/doink-laptop;
