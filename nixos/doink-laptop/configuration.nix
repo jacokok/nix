@@ -8,8 +8,8 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules
-    inputs.home-manager.nixosModules.home-manager
+    ../configuration.nix
+    ../imports.nix
   ];
 
   # Bootloader.
@@ -18,14 +18,4 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "doink-laptop";
-
-  home-manager = {
-    extraSpecialArgs = {
-      inherit inputs outputs;
-    };
-    users = {
-      doink = import ../../home/hosts/doink-laptop;
-    };
-    backupFileExtension = "hm-backup";
-  };
 }
