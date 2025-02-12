@@ -28,6 +28,9 @@
       pm = "pnpm";
       vi = "nvim";
       vim = "nvim";
+      nou = "git -C ~/nix/ pull";
+      hms = "home-manager switch --flake ~/nix";
+      nos = "sudo nixos-rebuild build --flake ~/nix";
     };
 
     sessionVariables = {
@@ -47,8 +50,6 @@
     source = ../assets/nix.svg;
   };
 
-  # home.file.".mozilla/firefox/doink/chrome".source = inputs.firefox-gnome-theme;
-
   programs = {
     home-manager.enable = true;
     direnv = {
@@ -57,16 +58,10 @@
     };
     bash = {
       enable = true;
-      #initExtra = ''
-      #   # Make Nix and home-manager installed things available in PATH.
-      #   export PATH=/run/current-system/sw/bin/:/nix/var/nix/profiles/default/bin:$HOME/.nix-profile/bin:/etc/profiles/per-user/$USER/bin:$PATH
-      # '';
     };
     bat = {
       enable = true;
       config = {
-        #theme = "Visual Studio Dark+";
-        #  theme = "Catppuccin Mocha";
         color = "always";
       };
     };
