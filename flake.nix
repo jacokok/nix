@@ -72,9 +72,7 @@
         inherit inputs outputs;
       };
 
-      # TODO: Remove modules
-      # nixosModules = import ./modules;
-
+      # Available through 'nixos-rebuild --flake .#doink-pc'
       nixosConfigurations = {
         doink-pc = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
