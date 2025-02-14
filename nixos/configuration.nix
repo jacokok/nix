@@ -7,17 +7,11 @@
 {
   networking = {
     networkmanager.enable = true;
-    # extraHosts =
-    #   ''
-    #     127.0.0.1 docxam.local
-    #   '';
     firewall.trustedInterfaces = [ "docker0" ];
   };
 
-  # Set your time zone.
   time.timeZone = "Africa/Johannesburg";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_ZA.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_ZA.UTF-8";
@@ -32,7 +26,6 @@
   };
 
   services = {
-    # Configure keymap in X11
     xserver = {
       xkb = {
         layout = "za";
@@ -68,12 +61,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
 
   # Allow unfree packages
@@ -84,14 +71,6 @@
       outputs.overlays.modifications
     ];
   };
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
   # Limit the number of generations to keep
   boot.loader.systemd-boot.configurationLimit = 10;
@@ -158,10 +137,8 @@
     homeBinInPath = true;
     localBinInPath = true;
     sessionVariables = {
-      # TERMINAL = "wezterm";
-      # TERM = "wezterm";
       BROWSER = "firefox";
-      TERM = "wezterm";
+      TERM = "ghostty";
       TERMINAL = "ghostty";
       EDITOR = "nvim";
       NIXOS_OZONE_WL = "1";

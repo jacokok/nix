@@ -4,7 +4,6 @@ let
     just-perfection
     caffeine
     rounded-window-corners-reborn
-    blur-my-shell
   ];
 in
 {

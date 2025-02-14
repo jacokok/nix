@@ -39,23 +39,20 @@
   };
 
   outputs =
-    { self
-    , nixpkgs
-    , nix-flatpak
-    , nixos-hardware
-    , home-manager
-    , sops-nix
-    , dotfiles
-    , catppuccin
-    , disko
-    , ...
+    {
+      self,
+      nixpkgs,
+      nix-flatpak,
+      nixos-hardware,
+      home-manager,
+      sops-nix,
+      dotfiles,
+      catppuccin,
+      disko,
+      ...
     }@inputs:
     let
       inherit (self) outputs;
-      vars = {
-        user = "doink";
-        system = "x86_64-linux";
-      };
       systems = [
         "aarch64-linux"
         "i686-linux"
@@ -71,7 +68,34 @@
         inherit inputs outputs;
       };
 
-      nixosConfigurations =
-        (import ./hosts { inherit inputs outputs nixpkgs vars; });
+      # Available through 'nixos-rebuild --flake .#doink-pc'
+      nixosConfigurations = {
+        doink-pc = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [ ./nixos/doink-pc/configuration.nix ];
+        };
+        doink-laptop = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [ ./nixos/doink-laptop/configuration.nix ];
+        };
+      };
+
+      # Available through 'home-manager --flake .#doink@doink-pc'
+      homeConfigurations = {
+        "doink@doink-pc" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [
+            ./home-manager/home.nix
+          ];
+        };
+        "doink@doink-laptop" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [
+            ./home-manager/home.nix
+          ];
+        };
+      };
     };
 }
