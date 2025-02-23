@@ -5,12 +5,16 @@
       enable = true;
       package = pkgs.vscode;
       mutableExtensionsDir = true;
-      extensions = (
-        with pkgs.vscode-extensions;
-        [
-          ms-dotnettools.csharp
-        ]
-      );
+      profiles = {
+        default = {
+          extensions = (
+            with pkgs.vscode-extensions;
+            [
+              ms-dotnettools.csharp
+            ]
+          );
+        };
+      };
     };
   };
 }
