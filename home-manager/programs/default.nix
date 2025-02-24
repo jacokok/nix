@@ -18,7 +18,6 @@
     fd
     tree
     curl
-    # firefox
     gnome-tweaks
     nixpkgs-fmt
     bottom
@@ -51,12 +50,12 @@
     go
     nixfmt-rfc-style
     libnotify
-    azuredatastudio
     gh
     yq
-    # jetbrains.rider
     freecad
     mqttui
     fritzing
+    duf
+    popsicle
   ];
 }
