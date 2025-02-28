@@ -57,5 +57,6 @@
     fritzing
     duf
     popsicle
+    awscli2
   ];
 }
