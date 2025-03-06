@@ -11,10 +11,6 @@
           line-numbers = true;
           side-by-side = true;
           navigate = true;
-          # catppuccin = {
-          #   enable = true;
-          #   flavor = "mocha";
-          # };
         };
       };
       signing = {

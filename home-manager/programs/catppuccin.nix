@@ -9,5 +9,6 @@
     starship.enable = true;
     fzf.enable = true;
     bat.enable = true;
+    yazi.enable = true;
   };
 }
