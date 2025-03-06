@@ -11,6 +11,7 @@
     ./vscode
     ./helix.nix
     ./atuin.nix
+    ./yazi.nix
   ];
   home.packages = with pkgs; [
     wget
@@ -44,7 +45,7 @@
     lazydocker
     lazysql
     unzip
-    yazi
+    # yazi
     cargo
     rustc
     go
