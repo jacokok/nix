@@ -137,7 +137,7 @@
     homeBinInPath = true;
     localBinInPath = true;
     sessionVariables = {
-      BROWSER = "app.zen_browser.zen";
+      BROWSER = "firefox";
       TERM = "ghostty";
       TERMINAL = "ghostty";
       EDITOR = "nvim";

@@ -12,7 +12,6 @@
 
     packages = [
       "org.gtk.Gtk3theme.adw-gtk3-dark"
-      "io.gitlab.adhami3310.Impression"
       "io.gitlab.adhami3310.Converter"
       "io.beekeeperstudio.Studio"
       "com.github.tchx84.Flatseal"
@@ -29,7 +28,6 @@
       "com.usebottles.bottles"
       "com.redis.RedisInsight"
       "org.raspberrypi.rpi-imager"
-      "io.github.zen_browser.zen"
       "com.heroicgameslauncher.hgl"
     ];
   };
