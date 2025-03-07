@@ -59,5 +59,11 @@
     duf
     popsicle
     awscli2
+
+    # Lang Tools
+    taplo
+    marksman
+    nixd
+    nil
   ];
 }
