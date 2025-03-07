@@ -57,11 +57,11 @@
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
-        "lastModified": 1741281637,
-        "narHash": "sha256-IQXQutYab8XPI7/xkEcJn+aRwWTAcZJixLnf2arEGZ8=",
+        "lastModified": 1741299385,
+        "narHash": "sha256-400XWumq2SDwI/KfiJamd4ZRO1YllS6rEw0x8mcPXU4=",
         "owner": "rafaelmardojai",
         "repo": "firefox-gnome-theme",
-        "rev": "2a5fc5deff6e6b9b6dd0568ad4f98a19a3d48cf0",
+        "rev": "73fb2369cda11fc2a37101c4a9c992a0b356ee6d",
         "type": "github"
       },
       "original": {
