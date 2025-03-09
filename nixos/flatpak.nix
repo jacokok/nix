@@ -29,6 +29,7 @@
       "com.redis.RedisInsight"
       "org.raspberrypi.rpi-imager"
       "com.heroicgameslauncher.hgl"
+      "com.github.KRTirtho.Spotube"
     ];
   };
 }
