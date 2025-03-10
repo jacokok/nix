@@ -30,6 +30,7 @@
       "org.raspberrypi.rpi-imager"
       "com.heroicgameslauncher.hgl"
       "com.github.KRTirtho.Spotube"
+      "md.obsidian.Obsidian"
     ];
   };
 }
