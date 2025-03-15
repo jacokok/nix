@@ -30,7 +30,7 @@
       vim = "nvim";
       nou = "git -C ~/nix/ pull";
       hms = "home-manager switch --flake ~/nix";
-      nos = "sudo nixos-rebuild build --flake ~/nix";
+      nos = "sudo nixos-rebuild switch --flake ~/nix";
     };
 
     sessionVariables = {
