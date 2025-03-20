@@ -31,6 +31,7 @@
       "com.heroicgameslauncher.hgl"
       "com.github.KRTirtho.Spotube"
       "md.obsidian.Obsidian"
+      "flatpak run org.gimp.GIMP"
     ];
   };
 }
