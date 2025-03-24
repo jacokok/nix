@@ -8,7 +8,7 @@
     ./neovim.nix
     ./ghostty
     ./catppuccin.nix
-    ./vscode
+    # ./vscode
     ./helix.nix
     ./atuin.nix
     ./yazi.nix
@@ -35,7 +35,7 @@
     ffmpeg
     krita
     steam-run
-    zed-editor
+    # zed-editor
     nix-search-cli
     # lunacy middle click bug using flatpak isntead
     inkscape
