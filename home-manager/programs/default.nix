@@ -68,5 +68,6 @@
     bash-language-server
     docker-compose-language-service
     dockerfile-language-server-nodejs
+    vscode-fhs
   ];
 }
