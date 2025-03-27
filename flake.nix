@@ -29,6 +29,7 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
+    # helix.url = "github:helix-editor/helix/master";
     catppuccin.url = "github:catppuccin/nix";
 
     # Disko
