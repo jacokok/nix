@@ -1,7 +1,7 @@
 {
   programs.atuin = {
     enable = true;
-    # flags = [ "--disable-up-arrow" ];
+    flags = [ "--disable-up-arrow" ];
     settings = {
       auto_sync = true;
       filter_mode = "host";
