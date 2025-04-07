@@ -70,5 +70,6 @@
     dockerfile-language-server-nodejs
     vscode-fhs
     sleek
+    aichat
   ];
 }
