@@ -33,6 +33,7 @@
       "md.obsidian.Obsidian"
       "org.gimp.GIMP"
       "page.tesk.Refine"
+      "com.obsproject.Studio"
     ];
   };
 }
