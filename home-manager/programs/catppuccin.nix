@@ -4,6 +4,7 @@
 
   catppuccin = {
     enable = true;
+    mako.enable = false;
     flavor = "mocha";
     accent = "blue";
     starship.enable = true;

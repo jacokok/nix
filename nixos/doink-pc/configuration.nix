@@ -19,8 +19,14 @@
   boot.initrd.kernelModules = [ "amdgpu" ];
   services.xserver.videoDrivers = [ "amdgpu" ];
 
-  hardware.graphics = {
-    enable = true;
+  hardware = {
+    graphics = {
+      enable = true;
+      extraPackages = with pkgs; [
+        rocmPackages.clr.icd
+        amdvlk
+      ];
+    };
   };
 
   networking.hostName = "doink-pc";
