@@ -62,7 +62,7 @@
 
     # Lang Tools
     taplo
-    markdown-oxide
+    markdownlint-cli2
     nixd
     nil
     bash-language-server
