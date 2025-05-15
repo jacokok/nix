@@ -31,6 +31,8 @@
       nou = "git -C ~/nix/ pull";
       hms = "home-manager switch --flake ~/nix";
       nos = "sudo nixos-rebuild switch --flake ~/nix";
+      hmc = "home-manager generations | head --lines=2 | tac | cut --delimiter=' ' --fields='7' | xargs nix store diff-closures";
+      noc = "ls -v1 /nix/var/nix/profiles | tail -n 2 | awk '{print \"/nix/var/nix/profiles/\" $0}' - | xargs nix store diff-closures";
     };
 
     sessionVariables = {
