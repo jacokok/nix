@@ -34,7 +34,7 @@
     in
     {
       sessionVariables = {
-        DOTNET_ROOT = "${dotnet-combined}";
+        DOTNET_ROOT = "${dotnet-combined}/share/dotnet";
       };
       systemPackages = with pkgs; [
         dotnet-combined
