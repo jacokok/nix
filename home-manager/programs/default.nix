@@ -29,7 +29,6 @@
     appimage-run
     google-chrome
     android-tools
-    vesktop
     # godot_4
     python3
     ffmpeg

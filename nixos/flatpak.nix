@@ -34,6 +34,7 @@
       "org.gimp.GIMP"
       "page.tesk.Refine"
       "com.obsproject.Studio"
+      "dev.vencord.Vesktop"
     ];
   };
 }
