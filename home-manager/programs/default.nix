@@ -71,5 +71,6 @@
     vscode-fhs
     sleek
     aichat
+    vesktop
   ];
 }
