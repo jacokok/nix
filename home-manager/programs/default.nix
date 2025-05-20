@@ -72,5 +72,6 @@
     sleek
     aichat
     vesktop
+    jetbrains.datagrip
   ];
 }
