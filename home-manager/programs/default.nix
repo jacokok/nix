@@ -73,5 +73,6 @@
     aichat
     vesktop
     jetbrains.datagrip
+    postgresql
   ];
 }
