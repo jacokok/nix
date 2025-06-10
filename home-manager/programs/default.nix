@@ -29,7 +29,7 @@
     appimage-run
     google-chrome
     android-tools
-    # godot_4
+    godot_4
     python3
     ffmpeg
     krita
