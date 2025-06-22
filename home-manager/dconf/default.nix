@@ -2,7 +2,8 @@
   dconf.settings = {
     "org/gnome/shell" = {
       favorite-apps = [
-        "firefox.desktop"
+        "google-chrome.desktop"
+        # "firefox.desktop"
         "com.mitchellh.ghostty.desktop"
         "org.gnome.Nautilus.desktop"
         "code.desktop"

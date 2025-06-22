@@ -138,7 +138,7 @@
     homeBinInPath = true;
     localBinInPath = true;
     sessionVariables = {
-      BROWSER = "firefox";
+      BROWSER = "google-chrome-stable";
       TERM = "ghostty";
       TERMINAL = "ghostty";
       EDITOR = "nvim";
