@@ -74,5 +74,6 @@
     vesktop
     jetbrains.datagrip
     postgresql
+    trivy
   ];
 }
