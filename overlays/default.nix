@@ -7,6 +7,14 @@
     # ...
     # });
 
+    ghostty = prev.ghostty.overrideAttrs (_: {
+      preBuild = ''
+        shopt -s globstar
+        sed -i 's/^const xev = @import("xev");$/const xev = @import("xev").Epoll;/' **/*.zig
+        shopt -u globstar
+      '';
+    });
+
     # Overlay worked but simply changing version is not enough
     # vscode-extensions = final.lib.recursiveUpdate prev.vscode-extensions {
     #   ms-dotnettools.csharp = final.vscode-utils.buildVscodeMarketplaceExtension {
