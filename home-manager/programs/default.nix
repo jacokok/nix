@@ -23,7 +23,7 @@
     nixpkgs-fmt
     bottom
     distrobox
-    nodejs_22
+    nodejs_24
     fastfetch
     onefetch
     appimage-run
