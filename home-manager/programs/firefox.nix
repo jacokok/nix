@@ -4,7 +4,16 @@
   programs = {
     firefox = {
       enable = true;
-      profiles.doink = {
+      # profiles.default = {
+      #   extensions = {
+      #     force = true;
+      #   };
+      # };
+      profiles.default = {
+        # id = 1;
+        extensions = {
+          force = true;
+        };
         settings = {
           "extensions.pocket.enabled" = false;
           "gfx.webrender.all" = true;
