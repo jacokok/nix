@@ -72,7 +72,6 @@
     sleek
     aichat
     vesktop
-    jetbrains.datagrip
     postgresql
     trivy
   ];
