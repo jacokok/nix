@@ -63,7 +63,6 @@
     taplo
     markdownlint-cli2
     nixd
-    nil
     bash-language-server
     lua-language-server
     docker-compose-language-service
