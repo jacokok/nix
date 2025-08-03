@@ -5,9 +5,9 @@
       name = "adw-gtk3-dark";
     };
 
-    iconTheme = {
-      name = "MoreWaita";
-    };
+    # iconTheme = {
+    #   name = "MoreWaita";
+    # };
   };
 
   # qt = {
