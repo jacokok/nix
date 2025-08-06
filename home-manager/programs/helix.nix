@@ -7,6 +7,7 @@
         name = "nix";
         formatter.command = "nixfmt";
         language-servers = [ "nixd" ];
+        auto-format = true;
       }
     ];
     settings = {

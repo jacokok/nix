@@ -9,12 +9,12 @@
       window-theme = "ghostty";
       window-height = 55;
       gtk-adwaita = true;
-      adw-toolbar-style = "flat";
+      adw-toolbar-style = "raised";
       window-width = 200;
       auto-update = "off";
       bold-is-bright = true;
       shell-integration-features = "no-cursor,sudo,no-title";
-      
+
       keybind = [
         "ctrl+shift+h=previous_tab"
         "ctrl+shift+l=next_tab"
@@ -40,8 +40,4 @@
       ];
     };
   };
-  # home.packages = with pkgs; [ ghostty ];
-  # home.file = {
-  #   ".config/ghostty/config".source = "${inputs.dotfiles}/ghostty/config";
-  # };
 }
