@@ -3,13 +3,16 @@
   imports = [ inputs.catppuccin.homeModules.catppuccin ];
 
   catppuccin = {
-    enable = true;
-    mako.enable = false;
     flavor = "mocha";
     accent = "blue";
-    starship.enable = true;
-    fzf.enable = true;
+    atuin.enable = true;
     bat.enable = true;
+    bottom.enable = true;
+    delta.enable = true;
+    fzf.enable = true;
+    lazygit.enable = true;
+    obs.enable = true;
+    starship.enable = true;
     yazi.enable = true;
   };
 }
