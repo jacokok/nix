@@ -44,7 +44,6 @@
     lazydocker
     lazysql
     unzip
-    # yazi
     cargo
     rustc
     go
@@ -58,6 +57,11 @@
     duf
     popsicle
     awscli2
+    vscode-fhs
+    aichat
+    vesktop
+    postgresql
+    trivy
 
     # Lang Tools
     taplo
@@ -67,11 +71,16 @@
     lua-language-server
     docker-compose-language-service
     dockerfile-language-server-nodejs
-    vscode-fhs
+    yaml-language-server
+    markdown-oxide
     sleek
-    aichat
-    vesktop
-    postgresql
-    trivy
+
+    tailwindcss-language-server
+    nodePackages_latest.svelte-language-server
+    nodePackages_latest.typescript-language-server
+    nodePackages_latest.prettier
+    vscode-css-languageserver
+    vscode-json-languageserver
+    # vscode-html-languageserver
   ];
 }

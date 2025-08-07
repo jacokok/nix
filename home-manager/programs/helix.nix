@@ -9,6 +9,56 @@
         language-servers = [ "nixd" ];
         auto-format = true;
       }
+      {
+        name = "toml";
+        auto-format = true;
+        language-servers = [ "taplo" ];
+      }
+      {
+        name = "markdown";
+        formatter = {
+          command = "prettier";
+          args = [
+            "--parser"
+            "markdown"
+          ];
+        };
+      }
+      {
+        name = "yaml";
+        formatter = {
+          command = "prettier";
+          args = [
+            "--parser"
+            "yaml"
+          ];
+        };
+      }
+      {
+        name = "json";
+        formatter = {
+          command = "prettier";
+          args = [
+            "--parser"
+            "json"
+          ];
+        };
+      }
+      {
+        name = "svelte";
+        auto-format = true;
+      }
+      {
+        name = "typescript";
+        auto-format = true;
+        formatter = {
+          command = "prettier";
+          args = [
+            "--parser"
+            "typescript"
+          ];
+        };
+      }
     ];
     settings = {
       theme = "catppuccin_mocha";
