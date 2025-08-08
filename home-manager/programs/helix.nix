@@ -59,6 +59,16 @@
           ];
         };
       }
+      {
+        name = "c-sharp";
+        scope = "source.cs";
+        file-types = [ "cs" ];
+        roots = [
+          ".sln"
+          ".csproj"
+        ];
+        language-servers = [ "csharp-ls" ];
+      }
     ];
     settings = {
       theme = "catppuccin_mocha";

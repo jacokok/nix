@@ -81,6 +81,7 @@
     nodePackages_latest.prettier
     vscode-css-languageserver
     vscode-json-languageserver
+    csharp-ls
     # vscode-html-languageserver
   ];
 }
