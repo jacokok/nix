@@ -20,7 +20,7 @@
       extraConfig = {
         init.defaultBranch = "main";
         pull.rebase = true;
-        core.editor = "nvim";
+        core.editor = "helix";
 
         rebase = {
           autostash = true;

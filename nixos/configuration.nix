@@ -141,7 +141,7 @@
       BROWSER = "google-chrome-stable";
       TERM = "ghostty";
       TERMINAL = "ghostty";
-      EDITOR = "nvim";
+      EDITOR = "helix";
       NIXOS_OZONE_WL = "1";
       NIXPKGS_ALLOW_UNFREE = "1";
     };
