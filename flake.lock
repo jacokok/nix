@@ -41,11 +41,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1753450643,
-        "narHash": "sha256-x4lcgFN65eIXf1WLKzioe7IqTwkGccv2Sljnr6bNyMs=",
+        "lastModified": 1755299290,
+        "narHash": "sha256-g5IhsRyIvjIOU2AJNUp0mZ+SeJqPhM8R/Y68jvxDKOM=",
         "owner": "jacokok",
         "repo": "dotfiles",
-        "rev": "643a536d66dc1847428116d7078079d0ad797e56",
+        "rev": "f893b1b2eb628346da0e58dc7b66e92723cca59f",
         "type": "github"
       },
       "original": {
