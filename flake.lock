@@ -41,11 +41,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1758488796,
-        "narHash": "sha256-ni/A2njC87OCcwf8cNp49ibFEDByPzD7+RpxtDr2NPY=",
+        "lastModified": 1761817842,
+        "narHash": "sha256-LDJO/hVgVySq58yeje2WhwlW6QUiL23CIzSP+77Dr9k=",
         "owner": "jacokok",
         "repo": "dotfiles",
-        "rev": "d2bfe29f4a97f7c31e7bc149f93950526469c3c8",
+        "rev": "b4521a5afe8bcf530dba9895dfe18869935771dc",
         "type": "github"
       },
       "original": {
@@ -107,11 +107,11 @@
     },
     "nixos-hardware": {
       "locked": {
-        "lastModified": 1761759700,
-        "narHash": "sha256-zuiwvKAPwtMmwf44tb7Q7Y5d7JkBeuaF89PISUnkWA8=",
+        "lastModified": 1761827175,
+        "narHash": "sha256-XdPVSYyIBK4/ruoqujaQmmSGg3J2/EenexV9IEXhr6o=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "2379bc40992ec29feb1933bb4acd224fa055f3f8",
+        "rev": "43ffe9ac82567512abb83187cb673de1091bdfa8",
         "type": "github"
       },
       "original": {
